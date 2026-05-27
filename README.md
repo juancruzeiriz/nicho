@@ -58,42 +58,21 @@ El nicho de gym streamers y creadores de contenido fitness está creciendo pero 
 
 ---
 
-## 🔴 ESTADO ACTUAL — Sesión 2026-05-26
+## 🔴 ESTADO ACTUAL — Sesión 2026-05-27
 
 ### Completado
 - ✅ Día 2 (3.2): tabla de competencia Etsy completada con datos reales
-- ✅ Día 3 (3.3): 2 de 8 keywords ingresadas en eRank (`stream overlay pack` y `twitch overlay espanol`)
+- ✅ Día 3 (3.3): 7 de 8 keywords completadas en eRank
 
-### Pendiente para la próxima sesión
+### Pendiente — 1 keyword restante
 
-**1. Completar eRank (3.3) — máx. 2-3 búsquedas por día, plan free**
+| Keyword | Estado |
+|---|---|
+| `motorcycle streamer` | **pendiente — buscar mañana (nueva jornada de 5 búsquedas)** |
 
-Abrís `erank.com` > Tools > Keyword Tool. Buscás en este orden de prioridad y mandás fotos como hoy:
+### Una vez tengas `motorcycle streamer` → arrancamos Día 4 (3.4)
 
-| Prioridad | Keyword a buscar | Por qué primero |
-|---|---|---|
-| 1 | `guitar twitch overlay` | tu diferenciador más fuerte |
-| 2 | `motorcycle streamer` | nicho más vacío |
-| 3 | `gym stream overlay` | solo 2 relevantes en Etsy |
-| 4 | `overlay de stream` | referencia genérica en español |
-| 5 | `rock stream overlay` | si quedan búsquedas |
-| 6 | `fitness streamer pack` | si quedan búsquedas |
-
-Para cada keyword, mandame screenshot de: **Keyword Statistics** (búsquedas, competencia) + **Search Results Analysis** (precio avg) + **Top Listings**. Con eso yo lleno la tabla.
-
-**2. Completar tabla 3.2 — 4 filas con "verificar"**
-
-Estas búsquedas todavía tienen N Resultados sin confirmar (solo tomás nota de cuántos relevantes hay en p.1):
-- `stream overlay pack espanol`
-- `twitch overlay espanol`
-- `overlay de stream latino`
-- `VTuber overlay espanol`
-
-Si ya las viste y los números son parecidos a los otros (moto ~10, gym ~2), decime a ojo y lo cierro.
-
-**3. Una vez completo eRank → Día 4 (3.4)**
-
-El Día 4 es una sesión conmigo donde analizamos todo junto y definimos el primer producto. Para eso necesito la tabla de eRank completa (al menos 5 de 8 keywords).
+La tabla está completa suficiente para analizarla. Mandame el screenshot de motorcycle y hacemos el análisis completo + elección del primer nicho.
 
 ---
 
@@ -184,12 +163,12 @@ El Día 4 es una sesión conmigo donde analizamos todo junto y definimos el prim
 |---|---|---|---|---|---|
 | `stream overlay pack` | 217 | 15.090 🔴 ALTA | $15 | Polonia/Francia/UK | Mercado europeo/anglófono, estacional (pico mayo). No es tu nicho. |
 | `twitch overlay espanol` | <20 | **24 🟢 BAJÍSIMA** | $6,20 | México 54%, España 46% | Top sellers hacen ~$70-80 con solo 14-16 ventas. Nicho hispanohablante real. |
-| `overlay de stream` | — | — | — | — | pendiente |
-| `motorcycle streamer` | — | — | — | — | pendiente |
-| `guitar twitch overlay` | — | — | — | — | pendiente |
-| `rock stream overlay` | — | — | — | — | pendiente |
-| `gym stream overlay` | — | — | — | — | pendiente |
-| `fitness streamer pack` | — | — | — | — | pendiente |
+| `overlay de stream` | <20 (plan free) | **104 🔴** | $7.93 | Francia/Francófonos | 98% francés. Tags: overlays fr, streampack fr. No es tu audiencia. Usar solo como tag secundario. |
+| `motorcycle streamer` | — | — | — | — | pendiente (mañana) |
+| `guitar twitch overlay` | <20 (plan free) | **<20 🟢 VACÍO** | $5 | sin datos | 32 listings. Competidor más cercano: "Blaze Chords" $24.99, solo 3 ventas ($74.97). Tags no son ni de guitarra (vtuber overlay, twitch stream setup) → nicho sin optimizar. |
+| `rock stream overlay` | <20 (plan free) | **68 🟡** | $7.75 | sin datos | 68 listings. Top: StarryStreamFX $13/12 ventas ($156). #3 guitar player overlay $5 sin audio. |
+| `gym stream overlay` | <20 (plan free) | **<20 🟢 VACÍO** | $5 | sin datos | Solo 7 listings. Top: lofi gym background $7.67/13 ventas ($99). Estética kawaii/lofi, no gym serio. |
+| `fitness streamer pack` | <20 (plan free) | **<20** | $6.99 | sin datos | Tags dominantes: emotes pack, kick emotes. Nicho diferente (no overlays). Descartar. |
 
 **Top listings para `twitch overlay espanol`:**
 - \#1 "Spanish Cozy Twitch Panels" (MadeByMUUT): 16 ventas est., $4.18, $66.94 revenue
