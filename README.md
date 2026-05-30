@@ -58,21 +58,106 @@ El nicho de gym streamers y creadores de contenido fitness está creciendo pero 
 
 ---
 
-## 🔴 ESTADO ACTUAL — Sesión 2026-05-27
+## 🟢 ESTADO ACTUAL — Sesión 2026-05-30
 
 ### Completado
+- ✅ Día 1 (3.1): setup de cuentas (Etsy, eRank, Figma, Pinterest)
 - ✅ Día 2 (3.2): tabla de competencia Etsy completada con datos reales
-- ✅ Día 3 (3.3): 7 de 8 keywords completadas en eRank
+- ✅ Día 3 (3.3): tabla eRank completa — 8/8 keywords
+- ✅ Día 4 (3.4): análisis completo — nichos elegidos, nombre, precio, 7 piezas
+- ✅ Día 5 (3.5): Figma operativo — frame 1920×1080, PNG transparente exportado y verificado
+- ✅ Semana 2, Día 2 (4.2): 7 assets diseñados y exportados en Figma — overlay principal, 3 paneles, 3 pantallas
+- ✅ Semana 2, Día 3 (4.3): pack entregado — PNGs verificados, 8 íconos (PNG + SVG), LEEME_Primero.txt, Etsy_Listing.md, ZIP final (144 KB)
 
-### Pendiente — 1 keyword restante
+### ✅ SEMANA 1 COMPLETA · SEMANA 2 DÍAS 2-3 COMPLETOS
 
-| Keyword | Estado |
-|---|---|
-| `motorcycle streamer` | **pendiente — buscar mañana (nueva jornada de 5 búsquedas)** |
+**Nombre de tienda elegido: RiffStream**
 
-### Una vez tengas `motorcycle streamer` → arrancamos Día 4 (3.4)
+### ⏳ Pendiente para publicar en Etsy
 
-La tabla está completa suficiente para analizarla. Mandame el screenshot de motorcycle y hacemos el análisis completo + elección del primer nicho.
+1. **Grabar 3 alertas de audio** (Día 4 de Semana 2):
+   - `Alerta_Limpio.wav` → guitarra limpia (MiniFuse 1)
+   - `Alerta_Overdrive.wav` → Artemis overdrive
+   - `Alerta_Fuzz.wav` → fuzz germanio
+   - Ponerlas en `RiffStream_Pack\05_Alertas_Audio\` y rehacer el ZIP
+
+2. **Mockups** (3-5 imágenes para el listing de Etsy):
+   - Overlay sobre gameplay/cámara en vivo
+   - Cada pantalla (Starting Soon, BRB, Offline)
+   - Set de íconos y paneles
+   - Una alerta sonando (diferenciador)
+
+3. **Publicar en Etsy** (Semana 3):
+   - Subir mockups
+   - Pegar copy de `Etsy_Listing.md` (título, tags, descripción)
+   - Fijar precio ($12 USD)
+   - Confirmar descarga digital automática (ZIP)
+
+### 📁 Archivos en `D:\proyectos-personales\nicho\`
+
+```text
+RiffStream_Pack/
+├─ LEEME_Primero.txt          ← guía OBS en español
+├─ 01_Overlay/
+├─ 02_Paneles/
+├─ 03_Pantallas/
+├─ 04_Iconos/                 ← 8 PNG 256×256 + SVG
+└─ 05_Alertas_Audio/          ← placeholder (faltan tus audios)
+RiffStream_Pack.zip           ← ZIP final (144 KB, sin audios aún)
+Etsy_Listing.md               ← título, 13 tags, descripción SEO
+```
+
+---
+
+## 📊 RESULTADOS DÍA 4 — Brief de diseño
+
+### Q1 — Nichos elegidos (2 principales)
+
+| # | Nicho | Keyword | Competencia | Por qué |
+|---|---|---|---|---|
+| 1 | **Guitar/Rock stream overlay** | `guitar twitch overlay` | <20 🟢 VACÍO | Diferenciador único: audio real de guitarra. Nadie en el mercado lo ofrece. Precio potencial $15-25. |
+| 2 | **Twitch overlay en español** | `twitch overlay espanol` | 24 🟢 BAJÍSIMA | Demanda verificada (México 54% + España 46%). Los líderes cobran $4-6 sin audio — vos podés cobrar $12-18 con audio y superarlos fácil. |
+
+**Moto → Pack 3 más adelante.** La competencia es bajísima (21) pero el overlay pack de moto real solo tiene 1 venta demostrada. Esperamos a tener tracción antes de entrar ahí.
+
+### Q2 — 7 piezas del primer pack (Guitar/Rock)
+
+1. **Overlay principal** 1920×1080px — transparente, marco webcam esquina inferior izquierda, elementos de guitarra sutiles
+2. **Panel Discord** — icono Discord, estética metálica/rock
+3. **Panel Instagram/Redes** — mismo estilo
+4. **Panel Siguiente Stream** — mismo estilo
+5. **Starting Soon** 1920×1080px — opaco, texto "Comenzando en un momento..."
+6. **Be Right Back** 1920×1080px — opaco, texto "Volvemos ya..."
+7. **Offline Screen** 1920×1080px — opaco, horario + redes
+
+**BONUS audio (diferenciador):** `alert-limpia.mp3` · `alert-overdrive.mp3` · `alert-fuzz.mp3`
+
+### Q3 — Estilo visual (hombres hispanohablantes 18-30)
+
+- **Paleta:** negro/carbón base `#1A1A2E`, acento rojo eléctrico `#E63946`, blanco roto `#F1FAEE` para texto
+- **Tipografías:** Bebas Neue (títulos) + Inter (panels) — ambas gratuitas en Google Fonts
+- **Estética de referencia:** "Black Album" de Metallica — limpio, oscuro, no recargado. Sin pasteles, sin kawaii.
+
+### Q4 — Nombres candidatos para la tienda Etsy
+
+| # | Nombre | Por qué funciona |
+|---|---|---|
+| 1 | **RiffStream** | Directo, inglés, funciona en Etsy y lo entiende cualquier streamer |
+| 2 | **DistorsiónDigital** | Evoca pedalera + digital, único |
+| 3 | **VolumenLatino** | Rock + identidad latina, fácil de recordar |
+| 4 | **SonidoDeStream** | En español, destaca el diferenciador de audio |
+| 5 | **OverlayRock** | SEO directo, fácil de encontrar |
+
+> **Pendiente:** elegir uno antes de Semana 2. Si no podés decidir: **RiffStream** — corto, funciona en inglés y español, no tiene problemas de trademark.
+
+### Q5 — Precio inicial
+
+**$12 USD** para el primer pack completo (7 piezas + 3 MP3).
+
+- Competidores sin audio en `twitch overlay espanol`: $4-6
+- Competidores en `guitar twitch overlay`: $5-25 (sin audio real)
+- Tu pack incluye audio real de guitarra → valor percibido superior justifica $12
+- Después de 5-10 ventas con reviews positivas → subís a $18
 
 ---
 
@@ -164,7 +249,7 @@ La tabla está completa suficiente para analizarla. Mandame el screenshot de mot
 | `stream overlay pack` | 217 | 15.090 🔴 ALTA | $15 | Polonia/Francia/UK | Mercado europeo/anglófono, estacional (pico mayo). No es tu nicho. |
 | `twitch overlay espanol` | <20 | **24 🟢 BAJÍSIMA** | $6,20 | México 54%, España 46% | Top sellers hacen ~$70-80 con solo 14-16 ventas. Nicho hispanohablante real. |
 | `overlay de stream` | <20 (plan free) | **104 🔴** | $7.93 | Francia/Francófonos | 98% francés. Tags: overlays fr, streampack fr. No es tu audiencia. Usar solo como tag secundario. |
-| `motorcycle streamer` | — | — | — | — | pendiente (mañana) |
+| `motorcycle streamer` | Unknown (plan free) | **21 🟢 BAJÍSIMA** | $8 (median $7) | sin datos | 21 listings. Top: PNGtuber de moto (CleoCleo) 31 ventas $289. Overlay pack real (#4 StreamOverlaysTV) solo 1 venta a $30. Avg 0.16 daily views → demanda muy baja para overlays de moto. |
 | `guitar twitch overlay` | <20 (plan free) | **<20 🟢 VACÍO** | $5 | sin datos | 32 listings. Competidor más cercano: "Blaze Chords" $24.99, solo 3 ventas ($74.97). Tags no son ni de guitarra (vtuber overlay, twitch stream setup) → nicho sin optimizar. |
 | `rock stream overlay` | <20 (plan free) | **68 🟡** | $7.75 | sin datos | 68 listings. Top: StarryStreamFX $13/12 ventas ($156). #3 guitar player overlay $5 sin audio. |
 | `gym stream overlay` | <20 (plan free) | **<20 🟢 VACÍO** | $5 | sin datos | Solo 7 listings. Top: lofi gym background $7.67/13 ventas ($99). Estética kawaii/lofi, no gym serio. |
