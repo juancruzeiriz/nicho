@@ -1,4 +1,4 @@
-# ============================================================================
+﻿# ============================================================================
 #  build_pack_mockups.ps1  —  Generador de mockups de Etsy REUSABLE
 # ----------------------------------------------------------------------------
 #  Versión generalizada de _build_mockups.ps1. Sirve para CUALQUIER pack
@@ -45,6 +45,7 @@ function Find-Magick($explicit) {
     $cmd = Get-Command magick -ErrorAction SilentlyContinue
     if ($cmd) { return $cmd.Source }
     $candidates = @(
+        (Join-Path $env:USERPROFILE 'Apps\ImageMagick\magick.exe'),
         'C:\Program Files\ImageMagick-7.1.1-Q16\magick.exe',
         'C:\Program Files\ImageMagick-7.1.1-Q16-HDRI\magick.exe',
         'D:\ImageMagick-7.1.1-Q16\magick.exe'
@@ -191,8 +192,8 @@ $card4 = Join-Path $tmp 'card4.png'; New-Card (Join-Path $PackDir '04_Iconos\ic_
 
 $wf = Join-Path $tmp 'wf.png'
 & $magick -size 400x150 "xc:#1F1F23" `
-    -fill $RED -strokewidth 6 -stroke $RED `
-    -draw 'line 20,75 60,40 100,90 140,30 180,100 220,40 260,80 300,50 340,90 380,60' `
+    -fill none -strokewidth 6 -stroke $RED `
+    -draw 'polyline 20,75 60,40 100,90 140,30 180,100 220,40 260,80 300,50 340,90 380,60' `
     $wf
 $card5 = Join-Path $tmp 'card5.png'; New-Card $wf '3 ALERTAS GUITARRA REAL' $card5 '440x165'
 $card6 = Join-Path $tmp 'card6.png'; New-Card $null 'GUIA OBS EN ESPANOL' $card6
@@ -253,13 +254,13 @@ Write-Host '   06_Paneles.png OK'
 # === MOCKUP 7 — Set de iconos ===============================================
 Write-Host '== Mockup 7 - Set de iconos =='
 $iconCellW = 400; $iconCellH = 480
-$iconStartX = 100; $iconStartY = 520
+$iconStartX = 200; $iconStartY = 520
 
 $iconCards = @()
 $iconFiles = Get-ChildItem -Path (Join-Path $PackDir '04_Iconos') -Filter '*.png' -ErrorAction SilentlyContinue | Select-Object -First 8
 $slot = 0
 foreach ($icf in $iconFiles) {
-    $label = ([IO.Path]::GetFileNameWithoutExtension($icf.Name)).ToUpper()
+    $label = (([IO.Path]::GetFileNameWithoutExtension($icf.Name)) -replace '^ic[_-]?\d+[_-]?', '').ToUpper()
     $cardPath = Join-Path $tmp ("icard_$slot.png")
     $iconThumb = Join-Path $tmp ("ithumb_$slot.png")
     & $magick $icf.FullName -resize 280x280 $iconThumb

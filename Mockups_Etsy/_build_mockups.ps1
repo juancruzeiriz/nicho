@@ -1,4 +1,4 @@
-# Script para generar 8 mockups de Etsy para RiffStream con ImageMagick
+﻿# Script para generar 8 mockups de Etsy para RiffStream con ImageMagick
 # Cada mockup: 2000x2000 PNG, paleta rock (carbon #1A1A1D + rojo #E63946)
 #
 # NOTA: para packs nuevos (Gym, Moto) usá la versión generalizada y
@@ -138,8 +138,8 @@ $card4 = Join-Path $tmp 'card4.png'; New-Card (Join-Path $pack '04_Iconos\ic_pua
 # Card 5: 3 alertas audio (placeholder con waveform)
 $wf = Join-Path $tmp 'wf.png'
 & $magick -size 400x150 "xc:#1F1F23" `
-    -fill $RED -strokewidth 6 -stroke $RED `
-    -draw 'line 20,75 60,40 100,90 140,30 180,100 220,40 260,80 300,50 340,90 380,60' `
+    -fill none -strokewidth 6 -stroke $RED `
+    -draw 'polyline 20,75 60,40 100,90 140,30 180,100 220,40 260,80 300,50 340,90 380,60' `
     $wf
 $card5 = Join-Path $tmp 'card5.png'; New-Card $wf '3 ALERTAS GUITARRA REAL' $card5 '440x165'
 
