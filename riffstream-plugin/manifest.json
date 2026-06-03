@@ -1,0 +1,7 @@
+{
+  "name": "RiffStream Pack 01",
+  "id": "riffstream-pack-01",
+  "api": "1.0.0",
+  "main": "code.js",
+  "editorType": ["figma"]
+}
