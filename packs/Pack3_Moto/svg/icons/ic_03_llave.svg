@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <title>Llave combinada</title>
+  <g transform="rotate(-38 128 128)">
+    <rect x="114" y="70" width="28" height="104" rx="6" fill="#F4A259"/>
+    <path d="M98 80 v-28 a30 30 0 0 1 60 0 v28 h-18 v-24 a12 12 0 0 0 -24 0 v24 Z" fill="#F4A259"/>
+    <circle cx="128" cy="184" r="30" fill="#F4A259"/>
+    <circle cx="128" cy="184" r="14" fill="#1A1A1D"/>
+  </g>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <title>Bidon de combustible</title>
+  <path d="M64 84 h82 l18 18 v94 a10 10 0 0 1 -10 10 H74 a10 10 0 0 1 -10 -10 Z" fill="#F4A259"/>
+  <rect x="92" y="62" width="40" height="22" rx="4" fill="#F4A259"/>
+  <rect x="82" y="112" width="62" height="11" rx="3" fill="#1A1A1D"/>
+</svg>

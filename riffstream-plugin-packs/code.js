@@ -199,7 +199,6 @@ function buildPack(packKey, packIndex) {
     // Paneles (3)
     var pnames = ["02_Panel_Discord", "03_Panel_Instagram", "04_Panel_Siguiente"];
     var pacc = [pack.accent, pack.accent2, pack.accent];
-    var pchain = Promise.resolve();
     var pi = 0;
     function nextPanel() {
       if (pi >= pack.panels.length) return Promise.resolve();
@@ -235,7 +234,6 @@ function run() {
   return figma.loadFontAsync({ family: "Inter", style: "Bold" }).then(function () {
     return figma.loadFontAsync({ family: "Inter", style: "Regular" });
   }).then(function () {
-    var chain = Promise.resolve();
     var k = 0;
     function nextPack() {
       if (k >= BUILD.length) return Promise.resolve();

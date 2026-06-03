@@ -103,7 +103,7 @@ posts iniciales arriba.
 | `Semana3_Lanzamiento.md` | Checklist de publicación Pack 1 + Pinterest/Reddit. |
 | `Roadmap_Semanas_3-5.md` | Este archivo. |
 | `packs/Pack2_Gym/` | Listing + SVG del Pack Gym. |
-| `packs/Pack3_Moto/` | Listing + (plantilla) del Pack Moto. |
+| `packs/Pack3_Moto/` | Listing + 8 íconos SVG del Pack Moto. |
 | `seo/Keywords_Tags.md` | Tag banks y estrategia SEO. |
 | `marketing/` | Pinterest, Reddit, Bundle. |
 | `soporte/Plantillas_Mensajes.md` | Respuestas al comprador. |

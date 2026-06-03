@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <title>Velocimetro</title>
+  <circle cx="128" cy="128" r="86" fill="none" stroke="#F4A259" stroke-width="14"/>
+  <line x1="128" y1="56" x2="128" y2="74" stroke="#F4A259" stroke-width="10" stroke-linecap="round"/>
+  <line x1="200" y1="128" x2="182" y2="128" stroke="#F4A259" stroke-width="10" stroke-linecap="round"/>
+  <line x1="56" y1="128" x2="74" y2="128" stroke="#F4A259" stroke-width="10" stroke-linecap="round"/>
+  <line x1="77" y1="77" x2="90" y2="90" stroke="#F4A259" stroke-width="10" stroke-linecap="round"/>
+  <line x1="179" y1="77" x2="166" y2="90" stroke="#F4A259" stroke-width="10" stroke-linecap="round"/>
+  <line x1="128" y1="128" x2="166" y2="96" stroke="#F4A259" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="128" cy="128" r="13" fill="#F4A259"/>
+</svg>

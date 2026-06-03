@@ -124,8 +124,9 @@ sirve, una reseña me ayuda un montón. ¡Buenos kilómetros! 🔥
 - Mockups a generar (ver `Mockups_Etsy/build_pack_mockups.ps1`): portada,
   qué incluye, 3 pantallas, paneles, set de íconos moteros, diferenciador audio.
 - Precio de salida: $12 USD. Subir a $18 tras primeras reseñas.
-- SVG editables de las piezas en `packs/Pack3_Moto/svg/` (cuando los generes
-  a partir de las plantillas de Pack 2 cambiando íconos y acento de color).
+- 8 íconos SVG listos en `packs/Pack3_Moto/svg/icons/`. El overlay, paneles y
+  pantallas se generan con el plugin `riffstream-plugin-packs/` (BUILD=["moto"])
+  y se exportan como PNG desde Figma.
 - Nota de mercado: la demanda de overlays de moto es baja (0.16 daily views
   según eRank). Lanzá este pack DESPUÉS de validar con Rock y Gym. Está listo
   para cuando quieras, pero no es prioridad de lanzamiento.

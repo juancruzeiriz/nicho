@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <title>Casco</title>
+  <path d="M128 48 C 84 48 56 82 56 128 v36 h30 v-22 a42 28 0 0 1 84 0 v22 h30 v-36 C 200 82 172 48 128 48 Z" fill="#F4A259"/>
+  <rect x="98" y="118" width="104" height="24" rx="12" fill="#1A1A1D"/>
+</svg>

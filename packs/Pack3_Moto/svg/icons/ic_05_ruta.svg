@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <title>Ruta</title>
+  <path d="M92 204 L116 52 h24 l24 152 Z" fill="#F4A259"/>
+  <rect x="124" y="64" width="8" height="22" rx="3" fill="#1A1A1D"/>
+  <rect x="124" y="104" width="8" height="22" rx="3" fill="#1A1A1D"/>
+  <rect x="124" y="144" width="8" height="22" rx="3" fill="#1A1A1D"/>
+</svg>
