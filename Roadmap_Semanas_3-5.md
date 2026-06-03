@@ -113,8 +113,8 @@ posts iniciales arriba.
 
 ---
 
-> **Nota — ImageMagick:** los scripts de mockups necesitan ImageMagick
-> instalado. Cuando lo reinstales, poné `magick.exe` en el PATH o ajustá la
-> variable al inicio del script (ya quedó path-agnóstico, autodetecta rutas
-> comunes). Descarga oficial: imagemagick.org. No lo instalé yo para no
-> tocar tu sistema sin que estés.
+> **Nota — ImageMagick:** ✅ INSTALADO (portable 7.1.2-24 Q16 x64) en
+> `C:\Users\Juan\Apps\ImageMagick\` y agregado al PATH de usuario. `magick`
+> funciona desde cualquier shell nuevo. Es portable (sin instalador, sin
+> admin): para desinstalar, borrá esa carpeta y sacá la entrada del PATH.
+> Los scripts de mockups ya lo autodetectan.
