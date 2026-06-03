@@ -152,6 +152,7 @@ $queIncluyeArgs = @(
     '-gravity', 'North', '-annotate', '+0+200', 'QUE INCLUYE',
     '-font', $FONT_TITLE, '-pointsize', '50', '-fill', $RED,
     '-gravity', 'North', '-annotate', '+0+390', 'TODO LO QUE NECESITAS PARA SALIR EN VIVO',
+    '-gravity', 'NorthWest',
     # Fila 1
     $card1, '-geometry', "+$gridX+$gridY", '-composite',
     $card2, '-geometry', "+$($gridX + $cellW + $gapX)+$gridY", '-composite',
@@ -250,7 +251,8 @@ $iconArgs = @(
     '-font', $FONT_TITLE, '-pointsize', '160', '-fill', $WHITE,
     '-gravity', 'North', '-annotate', '+0+150', '8 ICONOS ROCK',
     '-font', $FONT_TITLE, '-pointsize', '50', '-fill', $RED,
-    '-gravity', 'North', '-annotate', '+0+340', 'PNG + SVG  ·  EDITABLES  ·  TRANSPARENTES'
+    '-gravity', 'North', '-annotate', '+0+340', 'PNG + SVG  ·  EDITABLES  ·  TRANSPARENTES',
+    '-gravity', 'NorthWest'
 )
 $idx = 0
 for ($row = 0; $row -lt 2; $row++) {
