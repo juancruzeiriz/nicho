@@ -17,19 +17,23 @@ Pack de Stream Guitarra Rock | Overlay OBS + Alertas de Audio Reales + Pantallas
 
 ## ETIQUETAS / TAGS (13, máx. 20 caracteres c/u)
 
-1. overlay twitch
-2. stream guitarra
-3. pack stream rock
-4. alertas de audio
-5. overlay obs
-6. pantallas stream
-7. paneles twitch
+> El algoritmo de Etsy indexa mejor en inglés, incluso para productos en
+> español. Estos 13 tags están en inglés y todos respetan el límite de 20
+> caracteres. Pegá uno por campo de etiqueta.
+
+1. twitch overlay
+2. stream overlay
+3. guitar overlay
+4. rock stream pack
+5. obs overlay
+6. stream alerts
+7. twitch panels
 8. starting soon
-9. overlay rock
-10. kit streamer
-11. twitch kick
-12. overlay español
-13. plantilla stream
+9. stream screens
+10. streamer kit
+11. twitch kick obs
+12. spanish overlay
+13. stream template
 
 ---
 
@@ -91,6 +95,51 @@ Uso personal para tu canal. No se permite revender ni redistribuir los
 archivos. Los textos y redes son editables.
 
 ¿Dudas? Escribime, respondo rápido. ¡Que suene fuerte! 🔥🎸
+
+---
+
+## POLÍTICA DE TIENDA (pegar en Configuración › Políticas)
+
+### Entrega
+Producto 100% digital. La descarga se habilita automáticamente apenas Etsy
+confirma el pago — no hay envío físico ni demoras. Vas a encontrar el ZIP en
+tu cuenta, en "Compras y reseñas", y en el mail de confirmación de Etsy.
+
+### Reembolsos y cambios
+Por tratarse de archivos digitales descargables, **no se aceptan devoluciones
+ni reembolsos** una vez completada la descarga. Si algo no te funciona
+(archivo dañado, no podés abrirlo, falta una pieza), escribime ANTES de dejar
+una reseña: lo resuelvo en menos de 24 hs. Tu satisfacción es la prioridad.
+
+### Licencia de uso
+- ✅ Uso personal en tu canal (Twitch, Kick, YouTube, etc.).
+- ✅ Editar textos, colores y redes para adaptarlo a tu marca.
+- ❌ Revender, redistribuir o regalar los archivos.
+- ❌ Reclamar la autoría del diseño o el audio originales.
+
+### Privacidad
+Solo uso los datos que Etsy me comparte para procesar tu compra y darte
+soporte. No comparto tu información con terceros.
+
+---
+
+## MENSAJE DE BIENVENIDA AL COMPRADOR (pegar en Configuración › Mensaje automático)
+
+¡Gracias por tu compra! 🤘🎸
+
+Ya tenés tu pack RiffStream listo para descargar desde "Compras y reseñas".
+Adentro del ZIP vas a encontrar el archivo **LEEME_Primero** con la guía de
+instalación en OBS paso a paso, en español.
+
+Un par de tips para arrancar:
+• Cargá primero el Overlay principal como fuente de imagen en OBS.
+• Las alertas de audio (guitarra real) van como sonido de evento en
+  Streamlabs / StreamElements.
+• Los textos y redes son 100% editables.
+
+Si tenés cualquier duda o algo no te funciona, respondeme este mensaje:
+contesto rápido. Y si el pack te sirve, una reseña me ayuda un montón a
+seguir creando. ¡Que suene fuerte y buenos streams! 🔥
 
 ---
 

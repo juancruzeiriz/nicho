@@ -58,7 +58,7 @@ El nicho de gym streamers y creadores de contenido fitness está creciendo pero 
 
 ---
 
-## 🟢 ESTADO ACTUAL — Sesión 2026-05-30
+## 🟢 ESTADO ACTUAL — Sesión 2026-06-02
 
 ### Completado
 - ✅ Día 1 (3.1): setup de cuentas (Etsy, eRank, Figma, Pinterest)
@@ -67,31 +67,31 @@ El nicho de gym streamers y creadores de contenido fitness está creciendo pero 
 - ✅ Día 4 (3.4): análisis completo — nichos elegidos, nombre, precio, 7 piezas
 - ✅ Día 5 (3.5): Figma operativo — frame 1920×1080, PNG transparente exportado y verificado
 - ✅ Semana 2, Día 2 (4.2): 7 assets diseñados y exportados en Figma — overlay principal, 3 paneles, 3 pantallas
-- ✅ Semana 2, Día 3 (4.3): pack entregado — PNGs verificados, 8 íconos (PNG + SVG), LEEME_Primero.txt, Etsy_Listing.md, ZIP final (144 KB)
+- ✅ Semana 2, Día 3 (4.3): pack entregado — PNGs verificados, 8 íconos (PNG + SVG), LEEME_Primero.txt, ZIP final (144 KB)
+- ✅ Semana 2, Día 5 (4.5): listing de Etsy COMPLETO en `Etsy_Listing.md` — título, descripción, **13 tags en inglés**, **política de tienda** y **mensaje de bienvenida** al comprador.
+- ✅ Mockups de Etsy: **8 imágenes 2000×2000 generadas** en `Mockups_Etsy/` (portada, qué incluye, 3 pantallas, paneles, íconos, diferenciador de audio).
+- ✅ Guía de Semana 3 (lanzamiento) lista en `Semana3_Lanzamiento.md`.
 
-### ✅ SEMANA 1 COMPLETA · SEMANA 2 DÍAS 2-3 COMPLETOS
+### ✅ SEMANA 1 COMPLETA · SEMANA 2 COMPLETA (salvo audio)
 
 **Nombre de tienda elegido: RiffStream**
 
-### ⏳ Pendiente para publicar en Etsy
+### ⏳ Lo único que falta antes de publicar
 
-1. **Grabar 3 alertas de audio** (Día 4 de Semana 2):
+1. **Grabar 3 alertas de audio** (Día 4 de Semana 2 — requiere la guitarra, no lo puede hacer Claude):
    - `Alerta_Limpio.wav` → guitarra limpia (MiniFuse 1)
    - `Alerta_Overdrive.wav` → Artemis overdrive
    - `Alerta_Fuzz.wav` → fuzz germanio
-   - Ponerlas en `RiffStream_Pack\05_Alertas_Audio\` y rehacer el ZIP
+   - Ponerlas en `RiffStream_Pack\05_Alertas_Audio\` y rehacer el ZIP.
+   - Pasos detallados en la sección 4.4 de este README.
 
-2. **Mockups** (3-5 imágenes para el listing de Etsy):
-   - Overlay sobre gameplay/cámara en vivo
-   - Cada pantalla (Starting Soon, BRB, Offline)
-   - Set de íconos y paneles
-   - Una alerta sonando (diferenciador)
+2. **Publicar en Etsy** (Semana 3 — requiere tu cuenta de vendedor):
+   - Todo el copy y los mockups ya están listos.
+   - Seguí el checklist paso a paso de `Semana3_Lanzamiento.md`.
 
-3. **Publicar en Etsy** (Semana 3):
-   - Subir mockups
-   - Pegar copy de `Etsy_Listing.md` (título, tags, descripción)
-   - Fijar precio ($12 USD)
-   - Confirmar descarga digital automática (ZIP)
+> **Resumen:** el producto está 100% armado salvo el audio. En cuanto grabes
+> los 3 MP3 y rehagas el ZIP, podés publicar en menos de 20 minutos siguiendo
+> `Semana3_Lanzamiento.md`.
 
 ### 📁 Archivos en `D:\proyectos-personales\nicho\`
 
@@ -104,7 +104,9 @@ RiffStream_Pack/
 ├─ 04_Iconos/                 ← 8 PNG 256×256 + SVG
 └─ 05_Alertas_Audio/          ← placeholder (faltan tus audios)
 RiffStream_Pack.zip           ← ZIP final (144 KB, sin audios aún)
-Etsy_Listing.md               ← título, 13 tags, descripción SEO
+Etsy_Listing.md               ← título, 13 tags EN INGLÉS, descripción, política, bienvenida
+Mockups_Etsy/                 ← 8 mockups 2000×2000 para el listing (+ scripts de build)
+Semana3_Lanzamiento.md        ← checklist Etsy + copy Reddit + estrategia Pinterest
 ```
 
 ---
@@ -510,22 +512,23 @@ Si respondés las 5 sin dudar: Semana 1 exitosa, podés avanzar. Si no podés re
 El pack está listo si podés marcar todo:
 
 **DISEÑO**
-- [ ] 7 piezas exportadas como PNG en una carpeta organizada
-- [ ] Todas las piezas tienen coherencia visual (misma paleta, mismas tipografías)
-- [ ] Los overlays tienen fondo transparente (verificado)
-- [ ] Las pantallas full tienen fondo opaco y completo
+- [x] 7 piezas exportadas como PNG en una carpeta organizada
+- [x] Todas las piezas tienen coherencia visual (misma paleta, mismas tipografías)
+- [x] Los overlays tienen fondo transparente (verificado)
+- [x] Las pantallas full tienen fondo opaco y completo
+- [x] 8 mockups de presentación generados en `Mockups_Etsy/`
 
-**AUDIO**
+**AUDIO** *(pendiente — requiere la guitarra)*
 - [ ] 3 archivos MP3 exportados: limpio, overdrive, fuzz
 - [ ] Cada archivo tiene fade in y fade out
 - [ ] Duración entre 6-10 segundos cada uno
 - [ ] Sin ruido de fondo excesivo
 
 **COPY**
-- [ ] Título del listing escrito (120-140 caracteres)
-- [ ] Descripción completa en el doc
-- [ ] 13 tags en inglés listos
-- [ ] Política de tienda y mensaje de bienvenida
+- [x] Título del listing escrito (138 caracteres)
+- [x] Descripción completa en el doc
+- [x] 13 tags en inglés listos
+- [x] Política de tienda y mensaje de bienvenida
 
 ---
 
