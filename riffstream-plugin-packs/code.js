@@ -112,6 +112,13 @@ function rect(parent, x, y, w, h, fill, radius, opacity) {
   return r;
 }
 
+// Texto de la barra inferior segun el nicho (editable por el comprador)
+var OVERLAY_INFO = {
+  "Rock": { bar: "AHORA SUENA", txt: "Nombre del tema  -  Artista" },
+  "Gym":  { bar: "RUTINA DE HOY", txt: "Pierna  -  5 series" },
+  "Moto": { bar: "EN RUTA", txt: "Proximo destino  -  120 km" }
+};
+
 function buildOverlay(pack, rowY, x) {
   var overlay = figma.createFrame();
   overlay.name = pack.label + "_01_Overlay_Principal";
@@ -120,18 +127,51 @@ function buildOverlay(pack, rowY, x) {
   overlay.x = x;
   overlay.y = rowY;
 
-  var camX = 40;
-  var camY = 740;
-  var cam = rect(overlay, camX, camY, 400, 300, GRAFITO, 8, 0.25);
-  cam.strokes = solid(pack.accent);
-  cam.strokeWeight = 3;
-  rect(overlay, camX, camY - 2, 400, 2, pack.accent2, 0);
-  rect(overlay, 0, 1020, 1920, 60, GRAFITO, 0, 0.85);
+  var info = OVERLAY_INFO[pack.label] || { bar: "EN VIVO", txt: "Tu texto aca" };
 
-  return makeText("LIVE", 20, pack.accent, "Inter", "Bold").then(function (live) {
-    overlay.appendChild(live);
-    live.x = camX + 12;
-    live.y = camY + 10;
+  // Esquinas decorativas (brackets)
+  rect(overlay, 40, 40, 44, 6, pack.accent2);     // sup-izq H
+  rect(overlay, 40, 40, 6, 44, pack.accent2);     // sup-izq V
+  rect(overlay, 1836, 40, 44, 6, pack.accent);    // sup-der H
+  rect(overlay, 1874, 40, 6, 44, pack.accent);    // sup-der V
+  rect(overlay, 1836, 952, 44, 6, pack.accent);   // inf-der H
+  rect(overlay, 1874, 914, 6, 44, pack.accent);   // inf-der V
+
+  // Camara (esquina inferior izquierda)
+  var camX = 40, camY = 700, camW = 420, camH = 320;
+  var cam = rect(overlay, camX, camY, camW, camH, GRAFITO, 10, 0.22);
+  cam.strokes = solid(pack.accent);
+  cam.strokeWeight = 4;
+  rect(overlay, camX, camY - 4, camW, 4, pack.accent2, 0);
+  // Pill "EN VIVO"
+  rect(overlay, camX + 16, camY + 16, 132, 40, pack.accent, 20);
+
+  // Barra inferior + indicador de acento
+  rect(overlay, 0, 1020, 1920, 60, GRAFITO, 0, 0.88);
+  rect(overlay, 40, 1036, 8, 28, pack.accent, 2);
+
+  var labelW = 160;
+  return makeText("EN VIVO", 22, BLANCO, "Inter", "Bold").then(function (t) {
+    overlay.appendChild(t);
+    t.x = camX + 16 + (132 - t.width) / 2;
+    t.y = camY + 25;
+    return makeText("discord.gg/riffstream", 24, BLANCO, "Inter", "Bold");
+  }).then(function (t) {
+    overlay.appendChild(t);
+    t.x = 1820 - t.width; t.y = 56; t.opacity = 0.92;
+    return makeText("@riffstream", 20, BLANCO, "Inter", "Regular");
+  }).then(function (t) {
+    overlay.appendChild(t);
+    t.x = 1820 - t.width; t.y = 88; t.opacity = 0.7;
+    return makeText(info.bar, 22, pack.accent, "Bebas Neue", "Regular");
+  }).then(function (t) {
+    overlay.appendChild(t);
+    t.x = 64; t.y = 1038;
+    labelW = t.width;
+    return makeText(info.txt, 20, BLANCO, "Inter", "Regular");
+  }).then(function (t) {
+    overlay.appendChild(t);
+    t.x = 64 + labelW + 18; t.y = 1040; t.opacity = 0.85;
     return overlay;
   });
 }
@@ -230,10 +270,25 @@ function buildPack(packKey, packIndex) {
   });
 }
 
+// Borra los frames de una corrida anterior (de los packs en BUILD) para que
+// re-ejecutar el plugin no genere duplicados en la pagina.
+function clearPrevious() {
+  var prefixes = [];
+  for (var i = 0; i < BUILD.length; i++) { prefixes.push(PACKS[BUILD[i]].label + "_"); }
+  var kids = figma.currentPage.children.slice();
+  for (var j = 0; j < kids.length; j++) {
+    var nm = kids[j].name;
+    for (var p = 0; p < prefixes.length; p++) {
+      if (nm.indexOf(prefixes[p]) === 0) { kids[j].remove(); break; }
+    }
+  }
+}
+
 function run() {
   return figma.loadFontAsync({ family: "Inter", style: "Bold" }).then(function () {
     return figma.loadFontAsync({ family: "Inter", style: "Regular" });
   }).then(function () {
+    clearPrevious();
     var k = 0;
     function nextPack() {
       if (k >= BUILD.length) return Promise.resolve();
