@@ -220,3 +220,6 @@ __marimo__/
 # Exports crudos de Figma (scratch intermedio, no versionar)
 _export_gym/
 _export_moto/
+
+# ZIPs de pack armados localmente (se regeneran con build_pack_zip.ps1)
+packs/**/*.zip

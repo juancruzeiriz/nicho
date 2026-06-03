@@ -1,0 +1,55 @@
+=========================================
+  RIFFSTREAM RUTA  -  LEEME PRIMERO
+  Guia de instalacion en OBS (en espanol)
+=========================================
+
+Gracias por tu compra! Aca tenes todo para dejar tu canal motero listo en
+pocos minutos. Cualquier duda, escribime por Etsy: respondo rapido.
+
+CONTENIDO DEL PACK
+------------------
+- 01_Overlay/        Overlay principal 1920x1080 (PNG transparente)
+- 02_Paneles/        3 paneles de perfil (Discord, Instagram, Proximo stream)
+- 03_Pantallas/      Empezamos Pronto, Ya Vuelvo y Offline (1920x1080)
+- 04_Iconos/         8 iconos moteros (PNG + SVG editables)
+- 05_Alertas_Audio/  3 alertas de guitarra real (limpia, overdrive, fuzz)
+
+PASO 1 - PONER EL OVERLAY EN OBS
+--------------------------------
+1. Abri OBS Studio.
+2. En "Fuentes" hace clic en  +  ->  Imagen.
+3. Nombrala "Overlay" y elegi  01_Overlay/01_Overlay_Principal.png
+4. Arrastra esa fuente ARRIBA de tu camara y tu contenido en la lista.
+5. Estira la imagen hasta cubrir la pantalla (1920x1080).
+   El marco de camara va abajo a la izquierda: pone tu webcam ahi.
+
+PASO 2 - PANTALLAS (Empezamos / Ya Vuelvo / Offline)
+----------------------------------------------------
+- Crea una ESCENA nueva por cada una (boton + en "Escenas").
+- En cada escena agrega la imagen de 03_Pantallas/ como fuente Imagen.
+- Cambia de escena segun el momento del stream.
+
+PASO 3 - PANELES DEL PERFIL (Twitch / Kick)
+-------------------------------------------
+- En tu canal: Editar paneles  ->  agrega cada PNG de 02_Paneles/.
+- Son editables: abri el archivo en Figma (gratis) o Canva y poné tu @usuario.
+
+PASO 4 - ALERTAS DE AUDIO (el diferencial!)
+-------------------------------------------
+- En Streamlabs o StreamElements entra a la configuracion de Alertas.
+- En el evento que quieras (follow, sub, donacion) subi un MP3 de
+  05_Alertas_Audio/. Tenes 3 tonos: limpia, overdrive y fuzz.
+- Tip moto: usa una alerta como sonido de bienvenida al arrancar la ruta.
+
+EDITAR COLORES E ICONOS
+-----------------------
+Los iconos vienen tambien en SVG: los abris en Figma o cualquier editor
+vectorial y les cambias color o tamano para que peguen con tu marca.
+
+LICENCIA
+--------
+Uso personal para tu canal. No se permite revender ni redistribuir los
+archivos. Los textos y redes son tuyos para personalizar.
+
+Buenos kilometros y buenos streams!  -  RiffStream
+=========================================
