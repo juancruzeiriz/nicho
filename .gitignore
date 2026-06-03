@@ -216,3 +216,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Exports crudos de Figma (scratch intermedio, no versionar)
+_export_gym/
+_export_moto/
