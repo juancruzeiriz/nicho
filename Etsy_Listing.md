@@ -5,7 +5,7 @@
 
 ---
 
-## TÍTULO (opción principal — 138 caracteres)
+## TÍTULO (opción principal — 134 caracteres)
 
 Pack de Stream Guitarra Rock | Overlay OBS + Alertas de Audio Reales + Pantallas + Paneles | Twitch Kick | Plantilla Editable Español
 

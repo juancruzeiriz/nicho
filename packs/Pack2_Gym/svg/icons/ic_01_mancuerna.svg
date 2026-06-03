@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <title>Mancuerna</title>
+  <rect x="40" y="96" width="20" height="64" rx="6" fill="#F4A259"/>
+  <rect x="66" y="108" width="16" height="40" rx="5" fill="#F4A259"/>
+  <rect x="82" y="122" width="92" height="12" rx="6" fill="#F4A259"/>
+  <rect x="174" y="108" width="16" height="40" rx="5" fill="#F4A259"/>
+  <rect x="196" y="96" width="20" height="64" rx="6" fill="#F4A259"/>
+</svg>

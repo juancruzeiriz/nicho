@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <title>Cronometro</title>
+  <circle cx="128" cy="150" r="66" fill="none" stroke="#F4A259" stroke-width="14"/>
+  <rect x="110" y="36" width="36" height="22" rx="5" fill="#F4A259"/>
+  <rect x="120" y="56" width="16" height="18" fill="#F4A259"/>
+  <line x1="128" y1="150" x2="128" y2="108" stroke="#F4A259" stroke-width="12" stroke-linecap="round"/>
+  <line x1="128" y1="150" x2="158" y2="150" stroke="#F4A259" stroke-width="12" stroke-linecap="round"/>
+</svg>

@@ -36,7 +36,7 @@ Entrá a **Shop Manager › Listings › Add a listing** y completá con el copy
 | Campo de Etsy | De dónde sacarlo |
 |---|---|
 | **Photos** | Subí las 8 imágenes de `Mockups_Etsy/` en orden (01 → 08). La 01_Portada va primera. |
-| **Title** | El título principal (138 caracteres) de `Etsy_Listing.md`. |
+| **Title** | El título principal (134 caracteres) de `Etsy_Listing.md`. |
 | **About › Who made it** | "I did" |
 | **About › What is it** | "A finished product" |
 | **About › When** | "Made to order" o el año actual. |

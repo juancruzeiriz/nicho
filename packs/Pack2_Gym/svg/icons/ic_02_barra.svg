@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <title>Barra olimpica</title>
+  <rect x="20" y="120" width="216" height="16" rx="8" fill="#F4A259"/>
+  <rect x="48" y="92" width="16" height="72" rx="6" fill="#F4A259"/>
+  <rect x="70" y="104" width="14" height="48" rx="5" fill="#F4A259"/>
+  <rect x="172" y="104" width="14" height="48" rx="5" fill="#F4A259"/>
+  <rect x="192" y="92" width="16" height="72" rx="6" fill="#F4A259"/>
+</svg>

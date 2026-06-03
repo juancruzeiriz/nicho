@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <title>Pulso cardiaco</title>
+  <path d="M128 204 C 56 152 36 110 62 82 C 84 58 116 68 128 94 C 140 68 172 58 194 82 C 220 110 200 152 128 204 Z" fill="#F4A259"/>
+  <polyline points="78,130 108,130 120,106 136,156 150,130 178,130" fill="none" stroke="#1A1A1D" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

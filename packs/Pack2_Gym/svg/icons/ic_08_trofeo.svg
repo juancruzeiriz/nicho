@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <title>Trofeo PR</title>
+  <path d="M86 52 h84 v40 a42 42 0 0 1 -84 0 Z" fill="#F4A259"/>
+  <path d="M86 64 h-22 a26 26 0 0 0 26 26" fill="none" stroke="#F4A259" stroke-width="12"/>
+  <path d="M170 64 h22 a26 26 0 0 1 -26 26" fill="none" stroke="#F4A259" stroke-width="12"/>
+  <rect x="120" y="130" width="16" height="30" fill="#F4A259"/>
+  <rect x="94" y="160" width="68" height="14" rx="4" fill="#F4A259"/>
+  <rect x="104" y="174" width="48" height="16" rx="4" fill="#F4A259"/>
+</svg>

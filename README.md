@@ -525,7 +525,7 @@ El pack está listo si podés marcar todo:
 - [ ] Sin ruido de fondo excesivo
 
 **COPY**
-- [x] Título del listing escrito (138 caracteres)
+- [x] Título del listing escrito (134 caracteres)
 - [x] Descripción completa en el doc
 - [x] 13 tags en inglés listos
 - [x] Política de tienda y mensaje de bienvenida
