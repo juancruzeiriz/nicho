@@ -31,9 +31,16 @@ ADN visual pero cambian de acento de color y de iconografía:
 
 | Línea | Nicho | Acento de color | Íconos clave | Estado |
 |---|---|---|---|---|
-| **RiffStream Rock** | guitar/rock overlay | Rojo eléctrico `#E63946` | púa, jack, amplificador, EQ | ✅ Pack 1 listo |
-| **RiffStream Iron** (Gym) | gym/fitness overlay | Naranja energía `#F4A259` | mancuerna, barra, cronómetro, llama | 📝 Pack 2 — listing + SVG listos |
-| **RiffStream Ruta** (Moto) | motorcycle overlay | Ámbar/acero `#F4A259` + `#8D99AE` | casco, velocímetro, llave, cadena | 📝 Pack 3 — listing + SVG listos |
+| **RiffStream Rock** | guitar/rock overlay | Rojo eléctrico `#E63946` | púa, jack, amplificador, EQ | ✅ Pack 1 — assets + mockups (vía ImageMagick, sin Figma) |
+| **RiffStream Iron** (Gym) | gym/fitness overlay | Naranja energía `#F4A259` | mancuerna, barra, cronómetro, llama | ✅ Pack 2 — assets + mockups (Figma) |
+| **RiffStream Ruta** (Moto) | motorcycle overlay | Ámbar/acero `#F4A259` + `#8D99AE` | casco, velocímetro, llave, cadena | ✅ Pack 3 — assets + mockups (Figma) |
+
+> **Cómo se generan los assets:** Gym/Moto salieron del plugin de Figma
+> (`riffstream-plugin-packs`). Rock se reensambló 100% con ImageMagick
+> (`Mockups_Etsy/build_pack_assets.ps1`), replicando el mismo layout. Toda la
+> pipeline (assets + mockups + pines + branding + bundle) corre con
+> `Mockups_Etsy/build_all.ps1`. La tipografía de los assets de Rock usa
+> Bahnschrift (sustituto de Bebas Neue, que no está instalada localmente).
 
 > Mantener el mismo layout base (marco de cámara, barra inferior, posición de
 > redes) entre líneas. Solo cambian color de acento + íconos + textos. Eso

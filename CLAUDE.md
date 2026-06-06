@@ -6,7 +6,16 @@ Ver `README.md` para el plan completo (5 semanas + visión a 5 meses).
 
 ## Estado actual
 
-**Semana 1, Día 1** — Setup de cuentas (Etsy, eRank, Figma, Pinterest).
+**Assets de los 3 packs listos.** Rock, Gym y Moto tienen overlay + paneles +
+pantallas + 8 íconos + 8 mockups generados. Rock se ensambla 100% con
+ImageMagick (`Mockups_Etsy/build_pack_assets.ps1`, sin Figma); Gym/Moto salieron
+del plugin de Figma. Pipeline completa en un comando: `Mockups_Etsy/build_all.ps1`
+(ver `COMO_GENERAR_ASSETS.md`). También listos: 18 pines de Pinterest con imagen
+real (`marketing/pins/`), branding de tienda (`branding/`) y mockup del bundle
+(`marketing/Bundle_Mockup.png`).
+
+Pendiente del lado del usuario: grabar las 3 alertas de audio (guitarra real) y
+publicar los listings en Etsy.
 
 ## Convenciones del proyecto
 
