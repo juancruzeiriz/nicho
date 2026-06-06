@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <title>Amplificador</title>
+  <rect x="48" y="52" width="160" height="152" rx="14" fill="#E63946"/>
+  <rect x="62" y="66" width="132" height="20" rx="8" fill="#1A1A1D"/>
+  <circle cx="74" cy="76" r="4" fill="#E63946"/>
+  <circle cx="92" cy="76" r="4" fill="#E63946"/>
+  <circle cx="98" cy="150" r="34" fill="#1A1A1D"/>
+  <circle cx="160" cy="150" r="22" fill="#1A1A1D"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <title>Potenciometro</title>
+  <circle cx="128" cy="140" r="58" fill="#E63946"/>
+  <rect x="123" y="92" width="10" height="54" rx="5" fill="#1A1A1D"/>
+  <rect x="60" y="76" width="14" height="6" rx="3" fill="#E63946"/>
+  <rect x="94" y="50" width="14" height="6" rx="3" fill="#E63946"/>
+  <rect x="148" y="50" width="14" height="6" rx="3" fill="#E63946"/>
+  <rect x="182" y="76" width="14" height="6" rx="3" fill="#E63946"/>
+</svg>

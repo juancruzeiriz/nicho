@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <title>Microfono</title>
+  <rect x="100" y="38" width="56" height="98" rx="28" fill="#E63946"/>
+  <rect x="100" y="58" width="56" height="6" fill="#1A1A1D"/>
+  <rect x="100" y="76" width="56" height="6" fill="#1A1A1D"/>
+  <rect x="100" y="94" width="56" height="6" fill="#1A1A1D"/>
+  <rect x="122" y="136" width="12" height="40" fill="#E63946"/>
+  <rect x="92" y="200" width="72" height="14" rx="7" fill="#E63946"/>
+  <rect x="120" y="176" width="16" height="28" fill="#E63946"/>
+</svg>
