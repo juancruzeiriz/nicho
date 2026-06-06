@@ -99,7 +99,7 @@ $base = Join-Path $tmp 'base.png'
 & $magick -size 2000x2000 "gradient:$GRAFITO-$DARK" `
     -fill $ROJO -draw 'rectangle 0,1990 2000,2000' `
     -font $FONT_TITLE -pointsize 130 -fill $WHITE -gravity North -annotate +0+90 'BUNDLE RIFFSTREAM' `
-    -font $FONT_TITLE -pointsize 56 -fill $ROJO -gravity North -annotate +0+260 '3 PACKS  ·  1 PRECIO  ·  AHORRA HASTA 25%' `
+    -font $FONT_TITLE -pointsize 56 -fill $ROJO -gravity North -annotate +0+260 '3 PACKS  -  1 PRECIO  -  AHORRA HASTA 25%' `
     $base
 
 # Posiciones de los 3 thumbs (fila centrada)
@@ -130,21 +130,21 @@ $compose = @(
     '-fill',$GRAFITO,'-draw','roundrectangle 160,1300 1840,1900 18,18',
     '-fill',$ROJO,'-draw','rectangle 160,1300 1840,1316',
     '-font',$FONT_TITLE,'-pointsize','56','-fill',$WHITE,'-gravity','NorthWest','-annotate','+220+1350','COMBO',
-    '-font',$FONT_TITLE,'-pointsize','56','-fill',$WHITE70,'-gravity','NorthWest','-annotate','+980+1350','INDIVIDUAL',
+    '-font',$FONT_TITLE,'-pointsize','52','-fill',$WHITE70,'-gravity','NorthWest','-annotate','+1060+1350','INDIVIDUAL',
     '-font',$FONT_TITLE,'-pointsize','56','-fill',$WHITE,'-gravity','NorthWest','-annotate','+1320+1350','BUNDLE',
     '-font',$FONT_TITLE,'-pointsize','56','-fill',$ROJO,'-gravity','NorthWest','-annotate','+1620+1350','AHORRO',
     # fila DUO
-    '-font',$FONT_TITLE,'-pointsize','64','-fill',$WHITE,'-gravity','NorthWest','-annotate','+220+1470','DUO  ·  Rock + Gym',
-    '-font',$FONT_BODY,'-pointsize','58','-fill',$WHITE70,'-gravity','NorthWest','-annotate','+1010+1474','$24',
+    '-font',$FONT_TITLE,'-pointsize','54','-fill',$WHITE,'-gravity','NorthWest','-annotate','+220+1474','DUO  -  Rock + Gym',
+    '-font',$FONT_BODY,'-pointsize','54','-fill',$WHITE70,'-gravity','NorthWest','-annotate','+1090+1476','$24',
     '-font',$FONT_TITLE,'-pointsize','80','-fill',$COBRE,'-gravity','NorthWest','-annotate','+1330+1456','$18',
     '-font',$FONT_TITLE,'-pointsize','60','-fill',$ROJO,'-gravity','NorthWest','-annotate','+1620+1468','-25%',
     # fila TRIO
-    '-font',$FONT_TITLE,'-pointsize','64','-fill',$WHITE,'-gravity','NorthWest','-annotate','+220+1650','TRIO  ·  Rock + Gym + Moto',
-    '-font',$FONT_BODY,'-pointsize','58','-fill',$WHITE70,'-gravity','NorthWest','-annotate','+1010+1654','$36',
+    '-font',$FONT_TITLE,'-pointsize','54','-fill',$WHITE,'-gravity','NorthWest','-annotate','+220+1654','TRIO  -  Rock + Gym + Moto',
+    '-font',$FONT_BODY,'-pointsize','54','-fill',$WHITE70,'-gravity','NorthWest','-annotate','+1090+1656','$36',
     '-font',$FONT_TITLE,'-pointsize','80','-fill',$COBRE,'-gravity','NorthWest','-annotate','+1330+1636','$28',
     '-font',$FONT_TITLE,'-pointsize','60','-fill',$ROJO,'-gravity','NorthWest','-annotate','+1620+1648','-22%',
     # firma
-    '-font',$FONT_TITLE,'-pointsize','40','-fill',"${WHITE}AA",'-gravity','South','-annotate','+0+40','AUDIO DE GUITARRA REAL EN CADA PACK  ·  EDITABLE EN ESPANOL',
+    '-font',$FONT_TITLE,'-pointsize','40','-fill',"${WHITE}AA",'-gravity','South','-annotate','+0+40','AUDIO DE GUITARRA REAL EN CADA PACK  -  EDITABLE EN ESPANOL',
     (Join-Path $OutDir 'Bundle_Mockup.png')
 )
 & $magick @compose

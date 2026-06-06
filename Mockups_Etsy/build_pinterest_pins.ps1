@@ -63,7 +63,7 @@ $pins = @(
     @{ h='OVERLAY ROCK + AUDIO DE GUITARRA REAL'; s='Twitch  -  Kick  -  OBS';                 a='R'; wf=$false },
     @{ h='PACK DE STREAM COMPLETO PARA OBS';      s='Overlay - Pantallas - Paneles - Audio';   a='R'; wf=$false },
     @{ h='EMPEZAMOS PRONTO ESTILO ROCK';          s='Pantalla de inicio para tu stream';       a='R'; wf=$false },
-    @{ h='8 ICONOS ROCK  ·  PNG + SVG';           s='Editables para tu overlay';               a='R'; wf=$false },
+    @{ h='8 ICONOS ROCK  -  PNG + SVG';           s='Editables para tu overlay';               a='R'; wf=$false },
     @{ h='ALERTAS CON GUITARRA REAL';             s='Grabadas en vivo  -  3 variantes';        a='R'; wf=$true  },
     @{ h='PANELES PARA TU PERFIL DE TWITCH';      s='Discord - Instagram - Proximo stream';    a='R'; wf=$false },
     @{ h='YA VUELVO  (BRB)';                      s='Pantalla de pausa para tu stream';        a='R'; wf=$false },
@@ -73,7 +73,7 @@ $pins = @(
     @{ h='STREAMEAS TOCANDO LA VIOLA?';           s='Este pack es para vos';                   a='R'; wf=$false },
     @{ h='OVERLAY ROCK SOBRE GAMEPLAY';           s='Mira como queda en vivo';                 a='R'; wf=$false },
     @{ h='GUITARRA GRABADA EN VIVO';              s='El unico pack con audio real';            a='R'; wf=$true  },
-    @{ h='STARTING  ·  BRB  ·  OFFLINE';          s='3 pantallas a juego';                     a='R'; wf=$false },
+    @{ h='STARTING  -  BRB  -  OFFLINE';          s='3 pantallas a juego';                     a='R'; wf=$false },
     @{ h='SETUP ROCKERO EN 10 MINUTOS';           s='Listo para salir en vivo';                a='R'; wf=$false },
     @{ h='OVERLAY DE GYM PARA STREAMERS';         s='Estetica de hierro, no kawaii';           a='O'; wf=$false },
     @{ h='CELEBRA CADA PR EN VIVO';               s='Con alertas de guitarra real';            a='O'; wf=$true  },
@@ -95,7 +95,7 @@ function New-Pin($index, $pin) {
         '-font',$FONT_TITLE,'-pointsize','48','-fill',$accent,'-gravity','North','-annotate','+0+70','RIFFSTREAM',
         '-font',$FONT_BODY,'-pointsize','24','-fill',$WHITE70,'-gravity','North','-annotate','+0+148','OVERLAYS + ALERTAS DE GUITARRA REAL',
         '-fill',$accent,'-draw','rectangle 0,1380 1000,1500',
-        '-font',$FONT_TITLE,'-pointsize','46','-fill',$DARK,'-gravity','South','-annotate','+0+42','EN ETSY  ·  DESCARGA YA'
+        '-font',$FONT_TITLE,'-pointsize','46','-fill',$DARK,'-gravity','South','-annotate','+0+42','EN ETSY  -  DESCARGA YA'
     )
     if ($pin.wf) {
         # waveform decorativo de acento, centrado horizontalmente cerca de y=1120
@@ -113,11 +113,11 @@ function New-Pin($index, $pin) {
 
     # 2) titulo grande (caption auto-wrap)
     $head = Join-Path $tmp ("head_$num.png")
-    & $magick -background none -fill $WHITE -font $FONT_TITLE -size 840x -pointsize 92 caption:$pin.h $head
+    & $magick -background none -fill $WHITE -font $FONT_TITLE -size 840x -pointsize 92 "caption:$($pin.h)" $head
 
     # 3) subtitulo
     $sub = Join-Path $tmp ("sub_$num.png")
-    & $magick -background none -fill $accent -font $FONT_TITLE -size 760x -pointsize 40 -gravity Center caption:$pin.s $sub
+    & $magick -background none -fill $accent -font $FONT_TITLE -size 760x -pointsize 40 -gravity Center "caption:$($pin.s)" $sub
 
     # 4) componer: titulo arriba del centro, subtitulo debajo
     & $magick $base `

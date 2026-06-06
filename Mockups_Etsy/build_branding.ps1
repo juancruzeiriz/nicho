@@ -63,7 +63,7 @@ $b = @(
     # marca + tagline
     '-font',$FONT_TITLE,'-pointsize','110','-fill',$WHITE,'-gravity','West','-annotate','+70-20','RIFFSTREAM',
     '-font',$FONT_BODY,'-pointsize','30','-fill',$ROJO,'-gravity','West','-annotate','+74+70','OVERLAYS + ALERTAS DE GUITARRA REAL',
-    '-font',$FONT_BODY,'-pointsize','24','-fill',$WHITE70,'-gravity','West','-annotate','+74+112','Para streamers  ·  Twitch  ·  Kick  ·  OBS  ·  en espanol'
+    '-font',$FONT_BODY,'-pointsize','24','-fill',$WHITE70,'-gravity','West','-annotate','+74+112','Para streamers  -  Twitch  -  Kick  -  OBS  -  en espanol'
 )
 # waveform decorativo a la derecha
 $bx = 800
@@ -82,16 +82,11 @@ Write-Host "   $banner OK"
 # =============================== ICONO 500x500 ==============================
 Write-Host '== Icono de tienda 500x500 =='
 $icon = Join-Path $OutDir 'icono_tienda_500x500.png'
-# fondo carbon + anillo de acento + pua roja + monograma RS
+# fondo carbon + disco rojo + monograma RS (robusto, sin -draw path)
 $ic = @(
     '-size','500x500',"xc:$DARK",
-    # anillo de acento (circulo borde)
-    '-fill','none','-stroke',$ROJO,'-strokewidth','12','-draw','circle 250,250 250,40',
-    '-stroke','none',
-    # pua de guitarra (silueta de acento) centrada
-    '-fill',$ROJO,'-draw','path "M 250 150 C 318 150 360 184 360 240 C 360 300 296 372 250 384 C 204 372 140 300 140 240 C 140 184 182 150 250 150 Z"',
-    # monograma RS en carbon sobre la pua
-    '-font',$FONT_TITLE,'-pointsize','150','-fill',$DARK,'-gravity','Center','-annotate','+0-6','RS',
+    '-fill',$ROJO,'-draw','circle 250,250 250,90',
+    '-font',$FONT_TITLE,'-pointsize','210','-fill',$WHITE,'-gravity','Center','-annotate','+0+6','RS',
     $icon
 )
 & $magick @ic

@@ -223,3 +223,8 @@ _export_moto/
 
 # ZIPs de pack armados localmente (se regeneran con build_pack_zip.ps1)
 packs/**/*.zip
+
+# Archivos intermedios de los scripts (se regeneran)
+**/Mockups/_tmp/
+marketing/pins/_tmp/
+marketing/_tmp_bundle/
