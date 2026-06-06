@@ -191,8 +191,8 @@ function Build-Panel($out, $titulo, $sub, $acentoCode) {
         '-fill',$GRAFITO,'-draw','roundrectangle 0,0 299,159 8,8',
         '-fill',$ac,'-draw','rectangle 0,154 300,160',
         '-fill',$ac,'-draw','roundrectangle 20,20 68,68 6,6',
-        '-font',$FONT_TITLE,'-pointsize','28','-fill',$WHITE,'-gravity','NorthWest','-annotate','+84+22',$titulo,
-        '-font',$FONT_BODY,'-pointsize','16','-fill',$WHITE70,'-gravity','NorthWest','-annotate','+84+64',$sub,
+        '-font',$FONT_TITLE,'-pointsize','24','-fill',$WHITE,'-gravity','NorthWest','-annotate','+84+26',$titulo,
+        '-font',$FONT_BODY,'-pointsize','16','-fill',$WHITE70,'-gravity','NorthWest','-annotate','+84+66',$sub,
         '-fill',$accent2,'-draw','rectangle 280,138 286,144',
         $out
     )
