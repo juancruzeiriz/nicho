@@ -188,7 +188,18 @@ function New-Card($contentPath, $label, $outCard, $contentResize = '380x380') {
 $card1 = Join-Path $tmp 'card1.png'; New-Card (Join-Path $PackDir '01_Overlay\01_Overlay_Principal.png') '1 OVERLAY 1920x1080' $card1
 $card2 = Join-Path $tmp 'card2.png'; New-Card (Join-Path $PackDir '03_Pantallas\05_Starting_Soon.png') '3 PANTALLAS FULL HD' $card2
 $card3 = Join-Path $tmp 'card3.png'; New-Card (Join-Path $PackDir '02_Paneles\02_Panel_Discord.png') '3 PANELES PARA PERFIL' $card3 '400x213'
-$card4 = Join-Path $tmp 'card4.png'; New-Card (Join-Path $PackDir '04_Iconos\ic_01.png') '8 ICONOS PNG+SVG' $card4
+# card4: montage 2x2 de los primeros 4 iconos reales (antes referenciaba
+# ic_01.png que no existe -> la tarjeta salia vacia)
+$iconFiles4 = Get-ChildItem (Join-Path $PackDir '04_Iconos') -Filter '*.png' | Sort-Object Name | Select-Object -First 4
+$card4content = $null
+if ($iconFiles4) {
+    $card4content = Join-Path $tmp 'card4_icons.png'
+    $mArgs = @('montage')
+    foreach ($f in $iconFiles4) { $mArgs += $f.FullName }
+    $mArgs += @('-tile','2x2','-geometry','170x170+14+14','-background','none',$card4content)
+    & $magick @mArgs
+}
+$card4 = Join-Path $tmp 'card4.png'; New-Card $card4content '8 ICONOS PNG+SVG' $card4 '380x380'
 
 $wf = Join-Path $tmp 'wf.png'
 & $magick -size 400x150 "xc:#1F1F23" `
