@@ -6,25 +6,27 @@
 
 ---
 
-## 0. Pre-requisito (lo único que falta hacer vos)
+## 0. Pre-requisito de audio — ✅ HECHO
 
-Antes de publicar tenés que **grabar las 3 alertas de audio** (ver sección 4.4
-del README — guitarra → MiniFuse 1 → Audacity). Una vez exportados los MP3:
+Las alertas de audio ya están grabadas en `audios/` (2 tomas de cada tipo:
+`alert-clean-1/2.mp3`, `alert-overdrive-1/2.mp3`, `alert-fuzz-1/2.mp3` — se
+venden las dos tomas) y el ZIP final ya está armado **con los audios y el panel
+corregido adentro**: `packs/Pack1_Rock/RiffStream_Rock.zip` (~2.7 MB).
 
-1. Copialos a `D:\proyectos-personales\nicho\RiffStream_Pack\05_Alertas_Audio\`
-   con estos nombres exactos:
-   - `alert-limpia.mp3`
-   - `alert-overdrive.mp3`
-   - `alert-fuzz.mp3`
-2. Rehacé el ZIP. En PowerShell, parado en la carpeta `nicho`:
-   ```powershell
-   Compress-Archive -Path .\RiffStream_Pack\* -DestinationPath .\RiffStream_Pack.zip -Force
-   ```
-3. Verificá que el ZIP pese más que los 144 KB originales (señal de que los
-   audios entraron).
+Si en algún momento querés rehacer el ZIP (cambiar audios, etc.), corré desde
+`Mockups_Etsy/` en una PowerShell normal:
+```powershell
+& ".\build_pack_zip.ps1" `
+    -PackDir     "D:\workspace\nicho\packs\Pack1_Rock\RiffStream_Rock" `
+    -IconsSvgDir "D:\workspace\nicho\packs\Pack1_Rock\svg\icons" `
+    -AudioDir    "D:\workspace\nicho\audios"
+```
 
-> Sin este paso podés igual publicar el listing, pero el ZIP no tendría el
-> diferenciador de audio. Recomendado: grabar primero.
+> ⚠️ ImageMagick está crasheando (access violation) en este entorno, así que los
+> assets visuales NO se regeneran con magick. Si hay que rehacer el panel o el
+> mockup de paneles, usar los renders nativos `Mockups_Etsy/render_panel_gdi.ps1`
+> y `render_mockup06_gdi.ps1` (GDI+, sin magick). El ZIP sí se arma normal
+> (`build_pack_zip.ps1` no usa magick).
 
 ---
 
@@ -35,7 +37,7 @@ Entrá a **Shop Manager › Listings › Add a listing** y completá con el copy
 
 | Campo de Etsy | De dónde sacarlo |
 |---|---|
-| **Photos** | Subí las 8 imágenes de `Mockups_Etsy/` en orden (01 → 08). La 01_Portada va primera. |
+| **Photos** | Subí las 8 imágenes de `packs/Pack1_Rock/RiffStream_Rock/Mockups/` en orden (01 → 08). La 01_Portada va primera. |
 | **Title** | El título principal (134 caracteres) de `Etsy_Listing.md`. |
 | **About › Who made it** | "I did" |
 | **About › What is it** | "A finished product" |
@@ -46,7 +48,7 @@ Entrá a **Shop Manager › Listings › Add a listing** y completá con el copy
 | **Price** | **$12 USD** (precio de salida del README). |
 | **Quantity** | 999 (es digital, no se agota). |
 | **Tags** | Los **13 tags en inglés** de `Etsy_Listing.md`, uno por campo. |
-| **Digital files** | Subí `RiffStream_Pack.zip` (con los audios ya adentro). |
+| **Digital files** | Subí `packs/Pack1_Rock/RiffStream_Rock.zip` (con los audios ya adentro). |
 
 Luego, en **Settings › Policies**:
 - Pegá la **POLÍTICA DE TIENDA** de `Etsy_Listing.md`.
@@ -128,7 +130,7 @@ después suele preguntar dónde conseguirlo → ahí sí pasás el link.
 ## ✓ Cómo sé que completé la Semana 3
 
 - [ ] Listing publicado y visible en Etsy con las 8 fotos.
-- [ ] ZIP descargable con los 3 audios adentro.
+- [x] ZIP descargable con los audios adentro (6 archivos: 2 tomas de cada tipo).
 - [ ] 8 pins en Pinterest enlazando al listing.
 - [ ] 2 posts en Reddit publicados.
 - [ ] Stats de Etsy registrando las primeras visitas.

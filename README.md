@@ -72,40 +72,48 @@ El nicho de gym streamers y creadores de contenido fitness está creciendo pero 
 - ✅ Mockups de Etsy: **8 imágenes 2000×2000 generadas** en `Mockups_Etsy/` (portada, qué incluye, 3 pantallas, paneles, íconos, diferenciador de audio).
 - ✅ Guía de Semana 3 (lanzamiento) lista en `Semana3_Lanzamiento.md`.
 
-### ✅ SEMANA 1 COMPLETA · SEMANA 2 COMPLETA (salvo audio)
+### ✅ SEMANA 1 COMPLETA · SEMANA 2 COMPLETA
 
 **Nombre de tienda elegido: RiffStream**
 
+### ✅ Audio LISTO
+
+Las 6 alertas ya están grabadas en `audios/` (2 tomas de cada tipo: limpia,
+overdrive, fuzz) y metidas en el ZIP final junto con el panel corregido:
+`packs/Pack1_Rock/RiffStream_Rock.zip` (~2.7 MB).
+- `alert-clean-1.mp3` / `alert-clean-2.mp3`
+- `alert-overdrive-1.mp3` / `alert-overdrive-2.mp3`
+- `alert-fuzz-1.mp3` / `alert-fuzz-2.mp3`
+
 ### ⏳ Lo único que falta antes de publicar
 
-1. **Grabar 3 alertas de audio** (Día 4 de Semana 2 — requiere la guitarra, no lo puede hacer Claude):
-   - `Alerta_Limpio.wav` → guitarra limpia (MiniFuse 1)
-   - `Alerta_Overdrive.wav` → Artemis overdrive
-   - `Alerta_Fuzz.wav` → fuzz germanio
-   - Ponerlas en `RiffStream_Pack\05_Alertas_Audio\` y rehacer el ZIP.
-   - Pasos detallados en la sección 4.4 de este README.
-
-2. **Publicar en Etsy** (Semana 3 — requiere tu cuenta de vendedor):
+1. **Publicar en Etsy** (Semana 3 — requiere tu cuenta de vendedor):
    - Todo el copy y los mockups ya están listos.
    - Seguí el checklist paso a paso de `Semana3_Lanzamiento.md`.
 
-> **Resumen:** el producto está 100% armado salvo el audio. En cuanto grabes
-> los 3 MP3 y rehagas el ZIP, podés publicar en menos de 20 minutos siguiendo
-> `Semana3_Lanzamiento.md`.
+> **Resumen:** el producto está 100% armado (incluido el audio). Podés publicar
+> en menos de 20 minutos siguiendo `Semana3_Lanzamiento.md`.
+>
+> ⚠️ **ImageMagick crashea en este entorno** (access violation hasta en un canvas
+> vacío). Los assets visuales NO se regeneran con magick: usar los renders nativos
+> `Mockups_Etsy/render_panel_gdi.ps1` y `render_mockup06_gdi.ps1` (GDI+). El ZIP sí
+> se arma normal con `build_pack_zip.ps1` (no usa magick).
 
-### 📁 Archivos en `D:\proyectos-personales\nicho\`
+### 📁 Archivos en `D:\workspace\nicho\`
 
 ```text
-RiffStream_Pack/
+packs/Pack1_Rock/RiffStream_Rock/
 ├─ LEEME_Primero.txt          ← guía OBS en español
 ├─ 01_Overlay/
 ├─ 02_Paneles/
 ├─ 03_Pantallas/
 ├─ 04_Iconos/                 ← 8 PNG 256×256 + SVG
-└─ 05_Alertas_Audio/          ← placeholder (faltan tus audios)
-RiffStream_Pack.zip           ← ZIP final (144 KB, sin audios aún)
+├─ 05_Alertas_Audio/          ← (se llena al armar el ZIP)
+└─ Mockups/                   ← 8 mockups 2000×2000 para el listing
+packs/Pack1_Rock/RiffStream_Rock.zip   ← ZIP final (~2.7 MB, con los 6 audios)
+audios/                       ← 6 alertas grabadas (2 tomas c/u)
 Etsy_Listing.md               ← título, 13 tags EN INGLÉS, descripción, política, bienvenida
-Mockups_Etsy/                 ← 8 mockups 2000×2000 para el listing (+ scripts de build)
+Mockups_Etsy/                 ← scripts de build (magick + renders GDI+ de respaldo)
 Semana3_Lanzamiento.md        ← checklist Etsy + copy Reddit + estrategia Pinterest
 ```
 
