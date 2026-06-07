@@ -83,7 +83,7 @@ $PACKS = @{
         panels = @(
             @('DISCORD',        'discord.gg/riffstream', 'A'),
             @('INSTAGRAM',      '@riffstream',           'B'),
-            @('PROXIMO STREAM', 'Vie 21 00',             'A')
+            @('PROXIMO',        'Vie 21 00',             'A')
         )
         screens = @(
             @('RIFFSTREAM', 'EMPEZAMOS PRONTO', 'A'),
@@ -97,7 +97,7 @@ $PACKS = @{
         panels = @(
             @('DISCORD',        'discord.gg/riffstream', 'A'),
             @('INSTAGRAM',      '@riffstream',           'B'),
-            @('PROXIMO STREAM', 'Lun 20 00',             'A')
+            @('PROXIMO',        'Lun 20 00',             'A')
         )
         screens = @(
             @('RIFFSTREAM', 'EMPEZAMOS PRONTO',        'A'),
@@ -111,7 +111,7 @@ $PACKS = @{
         panels = @(
             @('DISCORD',        'discord.gg/riffstream', 'A'),
             @('INSTAGRAM',      '@riffstream',           'B'),
-            @('PROXIMO STREAM', 'Sab 15 00',             'A')
+            @('PROXIMO',        'Sab 15 00',             'A')
         )
         screens = @(
             @('RIFFSTREAM', 'ARRANCAMOS PRONTO', 'A'),

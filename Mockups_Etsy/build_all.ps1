@@ -21,7 +21,8 @@
 # ============================================================================
 
 param(
-    [string]$RockAudioDir = ''
+    [string]$RockAudioDir = '',
+    [int[]]$Steps = @(1,2,3,4,5,6)   # ej: -Steps 1,2,3 para solo assets+mockups+ZIP
 )
 
 $ErrorActionPreference = 'Stop'
@@ -33,33 +34,45 @@ $rockSvg  = Join-Path $repoRoot 'packs\Pack1_Rock\svg\icons'
 
 function Step($n, $msg) { Write-Host ""; Write-Host "######## [$n] $msg" -ForegroundColor Cyan }
 
-Step 1 'Assets del Pack Rock (ImageMagick, sin Figma)'
-& (Join-Path $here 'build_pack_assets.ps1') -Pack rock -PackDir $rockPack -IconsSvgDir $rockSvg
-
-Step 2 'Mockups de Etsy del Pack Rock'
-& (Join-Path $here 'build_pack_mockups.ps1') `
-    -PackDir $rockPack `
-    -OutDir  (Join-Path $rockPack 'Mockups') `
-    -Brand   'RIFFSTREAM' `
-    -Subtitle 'PACK PARA STREAMERS DE ROCK' `
-    -Accent  '#E63946'
-
-Step 3 'ZIP final del Pack Rock'
-$zipArgs = @{
-    PackDir     = $rockPack
-    IconsSvgDir = $rockSvg
+if (1 -in $Steps) {
+    Step 1 'Assets del Pack Rock (ImageMagick, sin Figma)'
+    & (Join-Path $here 'build_pack_assets.ps1') -Pack rock -PackDir $rockPack -IconsSvgDir $rockSvg
 }
-if ($RockAudioDir) { $zipArgs.AudioDir = $RockAudioDir }
-& (Join-Path $here 'build_pack_zip.ps1') @zipArgs
 
-Step 4 'Pines de Pinterest'
-& (Join-Path $here 'build_pinterest_pins.ps1')
+if (2 -in $Steps) {
+    Step 2 'Mockups de Etsy del Pack Rock'
+    & (Join-Path $here 'build_pack_mockups.ps1') `
+        -PackDir $rockPack `
+        -OutDir  (Join-Path $rockPack 'Mockups') `
+        -Brand   'RIFFSTREAM' `
+        -Subtitle 'PACK PARA STREAMERS DE ROCK' `
+        -Accent  '#E63946'
+}
 
-Step 5 'Branding de tienda (banner + icono)'
-& (Join-Path $here 'build_branding.ps1')
+if (3 -in $Steps) {
+    Step 3 'ZIP final del Pack Rock'
+    $zipArgs = @{
+        PackDir     = $rockPack
+        IconsSvgDir = $rockSvg
+    }
+    if ($RockAudioDir) { $zipArgs.AudioDir = $RockAudioDir }
+    & (Join-Path $here 'build_pack_zip.ps1') @zipArgs
+}
 
-Step 6 'Mockup del bundle'
-& (Join-Path $here 'build_bundle_mockup.ps1')
+if (4 -in $Steps) {
+    Step 4 'Pines de Pinterest'
+    & (Join-Path $here 'build_pinterest_pins.ps1')
+}
+
+if (5 -in $Steps) {
+    Step 5 'Branding de tienda (banner + icono)'
+    & (Join-Path $here 'build_branding.ps1')
+}
+
+if (6 -in $Steps) {
+    Step 6 'Mockup del bundle'
+    & (Join-Path $here 'build_bundle_mockup.ps1')
+}
 
 Write-Host ""
 Write-Host "==================================================" -ForegroundColor Green
