@@ -11,8 +11,10 @@
 # ============================================================================
 
 param(
-    [string]$OutDir = '',
-    [string]$Magick = ''
+    [string]$OutDir  = '',
+    [string]$Magick  = '',
+    [int]$Start      = 1,   # primer pin a generar (inclusive); usa -Start 19 para solo los nuevos
+    [int]$End        = 999  # ultimo pin a generar (inclusive)
 )
 
 $ErrorActionPreference = 'Stop'
@@ -82,7 +84,21 @@ $pins = @(
     @{ h='SETUP ROCKERO EN 10 MINUTOS';           s='Listo para salir en vivo';               a='R'; t='direct';   src=(Join-Path $rock 'Mockups\02_Que_Incluye.png') },
     @{ h='OVERLAY DE GYM PARA STREAMERS';         s='Estetica de hierro, no kawaii';          a='O'; t='direct';   src=(Join-Path $gym 'Mockups\01_Portada.png') },
     @{ h='CELEBRA CADA PR EN VIVO';               s='Con alertas de guitarra real';           a='O'; t='direct';   src=(Join-Path $gym 'Mockups\08_Audio_Guitarra.png') },
-    @{ h='BUNDLE: ROCK + GYM + AHORRA';           s='Llevate los packs y pagas menos';        a='R'; t='direct';   src=$bundle }
+    @{ h='BUNDLE: ROCK + GYM + AHORRA';           s='Llevate los packs y pagas menos';        a='R'; t='direct';   src=$bundle },
+
+    # ---- Semana 2: Pack Gym + reciclado (pins 19-30) ----
+    @{ h='PACK STREAM PARA FITNESS EN ESPANOL';   s='Overlay - Pantallas - Paneles - Audio';  a='O'; t='direct';   src=(Join-Path $gym 'Mockups\02_Que_Incluye.png') },
+    @{ h='ICONOS FITNESS PARA TU OVERLAY';        s='Mancuerna, Barra, Kettlebell y mas';     a='O'; t='direct';   src=(Join-Path $gym 'Mockups\07_Iconos.png') },
+    @{ h='OVERLAY ROCK + AUDIO DE GUITARRA';      s='El diferenciador #1 de tu stream';       a='R'; t='overlay';  src=(Join-Path $rock '01_Overlay\01_Overlay_Principal.png') },
+    @{ h='EMPEZAMOS PRONTO PARA STREAM DE GYM';   s='Pantalla de inicio fitness para OBS';    a='O'; t='direct';   src=(Join-Path $gym 'Mockups\03_Starting_Soon.png') },
+    @{ h='2 PACKS, 1 ESTETICA: ROCK Y GYM';      s='RiffStream - para cada tipo de streamer'; a='R'; t='mscreens'; src=@((Join-Path $rock 'Mockups\01_Portada.png'),(Join-Path $gym 'Mockups\01_Portada.png')) },
+    @{ h='OVERLAY DE GIMNASIO SERIO PARA OBS';    s='Estetica de hierro, nada de pasteles';   a='O'; t='direct';   src=(Join-Path $gym 'Mockups\01_Portada.png') },
+    @{ h='BUNDLE: LLEVATE ROCK + GYM Y AHORRA';  s='2 packs - descarga instantanea';         a='R'; t='direct';   src=$bundle },
+    @{ h='PANELES DE TWITCH A JUEGO CON TU OVERLAY'; s='Discord - Instagram - Proximo Stream'; a='R'; t='direct';  src=(Join-Path $rock 'Mockups\06_Paneles.png') },
+    @{ h='TU CANAL FITNESS CON IDENTIDAD PROPIA'; s='Overlay Gym + audio de guitarra real';   a='O'; t='direct';   src=(Join-Path $gym 'Mockups\02_Que_Incluye.png') },
+    @{ h='OVERLAYS EN ESPANOL PARA TWITCH Y KICK'; s='RiffStream - hecho por streamers';      a='R'; t='direct';   src=(Join-Path $rock 'Mockups\02_Que_Incluye.png') },
+    @{ h='SONIDO DE GUITARRA REAL PARA GYM STREAM'; s='Celebra cada PR con audio de verdad';  a='O'; t='direct';   src=(Join-Path $gym 'Mockups\08_Audio_Guitarra.png') },
+    @{ h='LA TIENDA DE OVERLAYS CON AUDIO REAL';  s='Nadie mas tiene esto - RiffStream';      a='R'; t='direct';   src=(Join-Path $rock 'Mockups\01_Portada.png') }
 )
 
 # --- Hero: produce una imagen de producto encajada para la zona superior ----
@@ -168,10 +184,13 @@ function New-Pin($index, $pin) {
     Write-Host "   $([IO.Path]::GetFileName($out)) OK"
 }
 
+$genStart = [Math]::Max(1, $Start) - 1            # indice 0-based
+$genEnd   = [Math]::Min($pins.Count, $End) - 1    # idem
+
 Write-Host "magick : $magick"
 Write-Host "out    : $OutDir"
-Write-Host "== Generando $($pins.Count) pines con imagen real =="
-for ($i=0; $i -lt $pins.Count; $i++) { New-Pin ($i+1) $pins[$i] }
+Write-Host "== Generando pines $($genStart+1) a $($genEnd+1) (total catalogo: $($pins.Count)) =="
+for ($i=$genStart; $i -le $genEnd; $i++) { New-Pin ($i+1) $pins[$i] }
 
 Remove-Item -Recurse -Force $tmp -ErrorAction SilentlyContinue
 Write-Host ''

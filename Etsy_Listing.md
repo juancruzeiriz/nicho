@@ -40,7 +40,7 @@ Pack de Stream Guitarra Rock | Overlay OBS + Alertas de Audio Reales + Pantallas
 ## CATEGORÍA / ATRIBUTOS
 - Categoría: Arte y coleccionables › Diseño y plantillas › Plantillas digitales
 - Tipo: Descarga digital
-- Formato de archivo: PNG, WAV (+ enlace Figma editable opcional)
+- Formato de archivo: PNG, MP3 (+ enlace Figma editable opcional)
 - Idioma: Español
 
 ---
@@ -61,7 +61,7 @@ detalle que NADIE más tiene: alertas con sonido de guitarra de verdad. 🤘
 ✔ 3 Pantallas a full HD: "Empezamos Pronto", "Ya Vuelvo" y "Offline".
 ✔ 3 Paneles para tu perfil: Discord, Instagram y Próximo Stream.
 ✔ 8 íconos rock (púa, potenciómetro, micrófono, jack, y más).
-✔ 3 ALERTAS DE AUDIO con guitarra REAL: limpia, overdrive y fuzz. ⭐
+✔ 6 ALERTAS DE AUDIO con guitarra REAL: 2 limpias, 2 overdrive y 2 fuzz. ⭐
 ✔ Guía de instalación en OBS paso a paso, EN ESPAÑOL.
 
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
@@ -134,7 +134,8 @@ instalación en OBS paso a paso, en español.
 Un par de tips para arrancar:
 • Cargá primero el Overlay principal como fuente de imagen en OBS.
 • Las alertas de audio (guitarra real) van como sonido de evento en
-  Streamlabs / StreamElements.
+  Streamlabs / StreamElements. Tenés 2 variaciones de cada estilo
+  (limpia, overdrive y fuzz) — probá cuál le queda mejor a tu canal.
 • Los textos y redes son 100% editables.
 
 Si tenés cualquier duda o algo no te funciona, respondeme este mensaje:
