@@ -228,3 +228,14 @@ packs/**/*.zip
 **/Mockups/_tmp/
 marketing/pins/_tmp/
 marketing/_tmp_bundle/
+
+# Screenshots de trabajo y scripts de scratch (no versionar)
+FIGMA.png
+reaper.png
+reaper2.png
+_jtest.bat
+_xln_junction.bat
+
+# Drafts de branding en la raiz (los finales viven en branding/)
+banner.png
+icono.png
