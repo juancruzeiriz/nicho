@@ -1,21 +1,35 @@
-# Stream Assets Business
+# RiffStream — portfolio de productos digitales
 
-Plan de negocio para vender packs de stream assets (overlays PNG + audio MP3) en Etsy, dirigido a streamers hispanohablantes. Diferenciadores: audio de guitarra real, cultura moto, conocimiento fitness/gym.
+Meta: **ingreso mensual recurrente en USD, de cualquier cliente del mundo, con
+productos de bajo esfuerzo de desarrollo**, apalancando 4 ejes: programador,
+músico (guitarra boutique), motos, nutrición/gym. Mercado mundial, **inglés
+primero** (bilingüe después).
 
-Ver `README.md` para el plan completo (5 semanas + visión a 5 meses).
+**La dirección vive en `OPORTUNIDADES.md`** (portfolio ranqueado de 8
+oportunidades + falencias + regla validar-antes-de-construir). El `README.md`
+describe el plan viejo (overlays en Etsy para hispanohablantes) — sirve como
+historia y por la data de eRank, no como dirección.
 
 ## Estado actual
 
-**Assets de los 3 packs listos.** Rock, Gym y Moto tienen overlay + paneles +
-pantallas + 8 íconos + 8 mockups generados. Rock se ensambla 100% con
-ImageMagick (`Mockups_Etsy/build_pack_assets.ps1`, sin Figma); Gym/Moto salieron
-del plugin de Figma. Pipeline completa en un comando: `Mockups_Etsy/build_all.ps1`
-(ver `COMO_GENERAR_ASSETS.md`). También listos: 18 pines de Pinterest con imagen
-real (`marketing/pins/`), branding de tienda (`branding/`) y mockup del bundle
-(`marketing/Bundle_Mockup.png`).
+**En construcción (foco):** los dos primeros productos de la nueva dirección,
+en `products/` — validación de demanda en `VALIDACION.md` (ambos GO).
 
-Pendiente del lado del usuario: grabar las 3 alertas de audio (guitarra real) y
-publicar los listings en Etsy.
+1. **Fitness Tracker** (`products/Fitness_Tracker/`): xlsx generado por
+   `build_tracker.py`, verificado con `verify_tracker.py` (lib `formulas`; en
+   esta máquina no hay Excel ni LibreOffice). Listing EN listo. Canales: Etsy
+   + Gumroad.
+2. **Pack SFX de guitarra** (`products/Guitar_SFX_Pack/`): estructura,
+   licencias, listing EN y empaquetador (`build_sfx_pack.ps1`) listos; faltan
+   grabar 12 sonidos (checklist en `README_PACK.md`). Canales: itch + Gumroad
+   + Etsy.
+
+**Catálogo terminado (no foco):** los 3 packs de overlays (Rock/Gym/Moto) con
+assets y mockups completos. Pipeline: `Mockups_Etsy/build_all.ps1 -Packs
+rock,gym,moto` (ver `COMO_GENERAR_ASSETS.md`). Se reciclan bilingües en
+itch/Booth como catálogo, sin más inversión de desarrollo.
+
+**Métricas:** una fila por producto×plataforma×semana en `metricas/metricas.csv`.
 
 ## Convenciones del proyecto
 
