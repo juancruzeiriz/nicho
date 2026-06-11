@@ -161,7 +161,8 @@ for r in range(4, 204):
             xlog[f'{col}{r}'] = v
             xlog[f'{col}{r}'].font = F(color=BLUE)
     xlog[f'F{r}'] = f'=IF(OR($C{r}="",$D{r}=""),"",ROUND($C{r}*(1+$D{r}/30),1))'
-    xlog[f'G{r}'] = f'=IF($F{r}="","",IF($F{r}>=MAXIFS($F$4:$F$203,$B$4:$B$203,$B{r}),"PR ★",""))'
+    # MAXIFS es post-2007: en el XML va con prefijo _xlfn. o Excel/LibreOffice dan #NAME?
+    xlog[f'G{r}'] = f'=IF($F{r}="","",IF($F{r}>=_xlfn.MAXIFS($F$4:$F$203,$B$4:$B$203,$B{r}),"PR ★",""))'
     xlog[f'A{r}'].number_format = 'yyyy-mm-dd'
     xlog[f'C{r}'].number_format = '0.0'
     xlog[f'F{r}'].number_format = '0.0'
@@ -179,7 +180,7 @@ dv_ex = DataValidation(type='list', formula1='=$I$4:$I$23', allow_blank=True)
 xlog.add_data_validation(dv_ex)
 dv_ex.add('B4:B203')
 xlog.freeze_panes = 'A4'
-for col, w in (('A', 12), ('B', 22), ('C', 9), ('D', 7), ('E', 6), ('F', 9), ('G', 8), ('I', 24)):
+for col, w in (('A', 12), ('B', 22), ('C', 9), ('D', 7), ('E', 6), ('F', 9), ('G', 11), ('I', 24)):
     xlog.column_dimensions[col].width = w
 
 # ---------- Dashboard ----------
@@ -268,6 +269,30 @@ for row, text, is_header in content:
         guide[f'A{row}'].font = F(size=10)
         guide[f'A{row}'].alignment = WRAP
         guide.row_dimensions[row].height = 28
+
+# ---------- Print setup (que el comprador imprima/exporte limpio) ----------
+def fit_wide(ws, tall=1):
+    ws.page_setup.fitToWidth = 1
+    ws.page_setup.fitToHeight = tall
+    ws.sheet_properties.pageSetUpPr.fitToPage = True
+    ws.page_margins.left = ws.page_margins.right = 0.4
+    ws.page_margins.top = ws.page_margins.bottom = 0.5
+
+from openpyxl.worksheet.properties import PageSetupProperties
+for ws in (dash, setup, wlog, xlog, guide):
+    ws.sheet_properties.pageSetUpPr = PageSetupProperties(fitToPage=True)
+
+dash.page_setup.orientation = 'landscape'
+fit_wide(dash, tall=1)
+dash.print_area = 'A1:N20'
+fit_wide(setup, tall=1)
+setup.print_area = 'A1:F26'
+fit_wide(wlog, tall=0)
+wlog.print_title_rows = '3:3'
+fit_wide(xlog, tall=0)
+xlog.print_title_rows = '3:3'
+fit_wide(guide, tall=1)
+guide.print_area = 'A1:A25'
 
 wb.save('Adaptive_Fitness_Tracker.xlsx')
 print('OK: Adaptive_Fitness_Tracker.xlsx')

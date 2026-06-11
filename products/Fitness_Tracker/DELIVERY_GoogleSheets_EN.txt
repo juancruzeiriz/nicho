@@ -1,0 +1,27 @@
+ADAPTIVE FITNESS TRACKER — How to use it in Google Sheets
+==========================================================
+
+You can use this tracker in Microsoft Excel OR for free in Google Sheets.
+
+GOOGLE SHEETS (free, works on any device)
+-----------------------------------------
+1. Go to https://sheets.google.com and sign in.
+2. Click the folder icon (Open file picker) -> Upload -> drag the
+   Adaptive_Fitness_Tracker.xlsx file in.
+3. It opens directly. To keep an editable copy in your Drive:
+   File -> Save as Google Sheets.
+4. Fill in the blue cells on the "Setup" tab and start logging.
+
+Tip: the dropdowns, the weight chart and the PR flags all work in
+Google Sheets. The "PR" column uses MAXIFS, which Google Sheets
+supports natively.
+
+MICROSOFT EXCEL
+---------------
+Just open the .xlsx file (Excel 2019 or newer / Microsoft 365).
+
+NEED HELP?
+----------
+Message me on the store where you bought this. Happy to help you set it up.
+
+Educational template — not medical or dietary advice.

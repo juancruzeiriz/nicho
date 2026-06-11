@@ -1,0 +1,10 @@
+# Artefactos intermedios regenerables (build_mockups.py / verify_tracker.py)
+_render_*.png
+_page_*.png
+mockups/_page_*.png
+*.pdf
+_scn/
+_scn_in/
+_chk/
+_verify/
+_scn_test.py
