@@ -1,21 +1,25 @@
 # Real Guitar Stream Alerts — doc interno del pack (producto #2)
 
-> Estado: estructura lista, **faltan grabar 12 sonidos** para el pack completo.
-> Los 6 existentes alcanzan para un soft-launch en itch.io (PWYW) si querés
-> salir ya. Validación de demanda: GO (ver `VALIDACION.md`).
+> Estado: **Vol. 1 LISTO para publicar** con los 6 riffs reales ya grabados.
+> Reframeado de "pack de 18" a "Vol. 1 de 6" (honesto + competitivo: la
+> validación mostró packs de 5 sonidos a $3-6 con cientos de reviews).
+> Los 12 sonidos cortos pasan a **Vol. 2** (roadmap abajo). GO en `VALIDACION.md`.
 
-## Inventario actual (en `audios/`)
+## Inventario de Vol. 1 (en `audios/`, 6 riffs · 68s totales)
 
-| Origen | Nombre en pack | Evento sugerido |
-|---|---|---|
-| alert-clean-1.mp3 | RGSP_Clean_Alert_01.mp3 | New follower |
-| alert-clean-2.mp3 | RGSP_Clean_Alert_02.mp3 | New follower (alt) |
-| alert-overdrive-1.mp3 | RGSP_Overdrive_Alert_01.mp3 | New sub |
-| alert-overdrive-2.mp3 | RGSP_Overdrive_Alert_02.mp3 | Donation / cheer |
-| alert-fuzz-1.mp3 | RGSP_Fuzz_Alert_01.mp3 | Raid |
-| alert-fuzz-2.mp3 | RGSP_Fuzz_Alert_02.mp3 | Raid (alt) |
+| Origen | Nombre en pack | Dur. | Evento sugerido |
+|---|---|---|---|
+| alert-clean-1.mp3 | RGSP_Clean_Alert_01.mp3 | ~10s | New follower |
+| alert-clean-2.mp3 | RGSP_Clean_Alert_02.mp3 | ~6s | New sub |
+| alert-overdrive-1.mp3 | RGSP_Overdrive_Alert_01.mp3 | ~11s | Donation / cheer |
+| alert-overdrive-2.mp3 | RGSP_Overdrive_Alert_02.mp3 | ~18s | Big donation |
+| alert-fuzz-1.mp3 | RGSP_Fuzz_Alert_01.mp3 | ~13s | Raid |
+| alert-fuzz-2.mp3 | RGSP_Fuzz_Alert_02.mp3 | ~11s | Hype train |
 
-## Faltan grabar (objetivo: pack de 18)
+**Build:** `python build_sfx_pack.py` (standard) y `--tier commercial`. Cross-platform,
+no necesita PowerShell. Genera `RealGuitar_StreamAlerts_{standard,commercial}.zip`.
+
+## Vol. 2 — roadmap (grabar cuando puedas)
 
 Por la validación, la categoría organiza por **evento**, no por tono. Checklist:
 
