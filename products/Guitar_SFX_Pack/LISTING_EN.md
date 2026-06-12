@@ -7,17 +7,15 @@
 > más eventos van en Vol. 2). La validación mostró que packs de 5 sonidos a
 > $3-6 venden con cientos de reviews → 6 sonidos a precio bajo es competitivo.
 
-## Estado de publicación (2026-06-11)
+## Estado de publicación (2026-06-12)
 
 - **Gumroad** 🟢 PUBLICADO — https://jeiriz.gumroad.com/l/gajolo ($5, un solo tier;
   variante Commercial $9 pendiente — requiere subir `*_commercial.zip`).
-- **itch.io** 🟡 DRAFT armado — https://riffstream.itch.io/real-guitar-stream-alerts-boutique-tone-sfx-vol-1
-  (clasif. "Game assets", "$0 or donate" sugerido $5, 5 tags, IA=No). Falta: subir
-  zip + cover (`cover/itch_cover.png`) + configurar pago + publicar.
-- **Etsy** 🟡 DRAFT armado ($5, categoría Social Media Templates, tipo digital,
-  descripción y radios listos). **Ojo:** los 13 tags entraron corruptos por una
-  carrera de tecleo — hay que borrarlos y re-pegarlos a mano desde la sección
-  "Etsy / 13 tags" de abajo. Falta también: fotos + archivo digital + publicar.
+- **itch.io** 🟢 PUBLICADO — https://riffstream.itch.io/real-guitar-stream-alerts-boutique-tone-sfx-vol-1
+  ("Game assets", "$0 or donate" sugerido $5, 5 tags, zip 2.4 MB + cover subidos,
+  público). Pendiente opcional: configurar pago para cobrar donaciones.
+- **Etsy** 🟢 PUBLICADO — activo $5, categoría Social Media Templates, zip 2.6 MB +
+  foto + 13 tags limpios (se corrigieron 2 tags corruptos). Listing ID 4520371511.
 
 ---
 
