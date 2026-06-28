@@ -1,0 +1,41 @@
+# Configuracion del bot de marketing. Editable sin tocar codigo.
+# Los TOKENS no van aca: van en automation/secrets/ (ignorado por git).
+
+schedule:
+  pins_per_day: 1        # cuantos pines de Pinterest por dia
+  videos_per_day: 1      # cuantos videos (YT/TikTok/IG) por dia
+  # hora la define el cron del sistema (ver DEPLOY.md)
+
+# Estado por plataforma. mode:
+#   live   -> postea publico de verdad
+#   draft  -> sube como borrador/privado (TikTok sin audit)
+#   notify -> NO postea; arma el contenido y avisa para pegado manual
+#   off    -> desactivada
+platforms:
+  pinterest: { enabled: true,  mode: live }
+  youtube:   { enabled: true,  mode: live }
+  tiktok:    { enabled: true,  mode: draft }   # -> live cuando pase el audit
+  instagram: { enabled: false, mode: live }    # -> enabled:true cuando pase el app review
+  reddit:    { enabled: true,  mode: notify }  # se queda en notify por riesgo de ban
+
+content:
+  low_threshold_days: 7   # si queda menos contenido fresco que esto, avisa "alimentar"
+
+# URL publica base de los videos. SOLO la necesita Instagram (descarga el video
+# de una URL, no lo sube). Ej: tu GitHub Pages. Dejar "" si IG esta off.
+media_base_url: ""        # https://juancruzeiriz.github.io/nicho
+
+notify:
+  channel: telegram       # telegram | email | none
+  # secrets: automation/secrets/telegram.json  -> {"token": "...", "chat_id": "..."}
+  # o      automation/secrets/email.json        -> {"smtp_host","smtp_port","user","password","to"}
+
+# Rotacion opcional de URLs de destino por producto (si vacio, usa el link del asset).
+destinations:
+  fitness:
+    - https://jeiriz.gumroad.com/l/cajakq
+    # - <URL listing Etsy fitness>   # pegar cuando la tengas
+  sfx:
+    - https://riffstream.itch.io/real-guitar-stream-alerts-boutique-tone-sfx-vol-1
+    - https://jeiriz.gumroad.com/l/gajolo
+    - https://www.etsy.com/listing/4520371511
