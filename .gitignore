@@ -251,3 +251,6 @@ marketing/secrets/
 automation/secrets/
 automation/state/
 automation/.venv/
+
+# Tarball de deploy del bot (artefacto local, no versionar)
+nicho-bot-deploy.tar.gz
