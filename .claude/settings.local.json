@@ -16,7 +16,9 @@
       "Bash(find:*)",
       "Bash(mkdir:*)",
       "Bash(cp:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Bash(ls /mnt/d/workspace/nicho/RiffStream_Pack/)",
+      "Bash(ls /mnt/d/workspace/nicho/RiffStream_Pack/05_Alertas_Audio/ 2>/dev/null || echo \"Vacía o no existe\")"
     ],
     "deny": [
       "Bash(rm -rf:*)",

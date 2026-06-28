@@ -239,3 +239,15 @@ _xln_junction.bat
 # Drafts de branding en la raiz (los finales viven en branding/)
 banner.png
 icono.png
+
+# Tokens / credenciales locales (NUNCA versionar)
+marketing/secrets/
+*.token
+
+# Frame temporal de verificacion de video
+**/video_clips/_frame_check.png
+
+# Bot de marketing: secrets, estado local y venv (NUNCA versionar)
+automation/secrets/
+automation/state/
+automation/.venv/
