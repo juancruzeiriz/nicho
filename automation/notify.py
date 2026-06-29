@@ -12,6 +12,13 @@ def send(cfg, subject, body):
                           data={'chat_id': s['chat_id'],
                                 'text': f'{subject}\n\n{body}'[:4000]}, timeout=30)
             return
+        if ch == 'discord':
+            import requests
+            s = load_secret('discord')    # {"webhook_url": "https://discord.com/api/webhooks/..."}
+            requests.post(s['webhook_url'],
+                          json={'content': f'**{subject}**\n{body}'[:1900]},
+                          timeout=30)
+            return
         if ch == 'email':
             import smtplib
             from email.message import EmailMessage
