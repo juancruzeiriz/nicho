@@ -1,0 +1,9 @@
+# Deps del bot de marketing. Instalar en un venv AISLADO (no el del bot de trading).
+#   python -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt
+PyYAML>=6.0
+requests>=2.31           # Pinterest, TikTok, Instagram (HTTP directo)
+google-api-python-client>=2.100   # YouTube Data API v3
+google-auth>=2.23
+google-auth-oauthlib>=1.1
+praw>=7.7                # Reddit (modo seguro)
+Pillow>=10.0             # reusa los factories de imagenes

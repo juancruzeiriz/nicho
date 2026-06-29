@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RiffStream — real-guitar SFX & smart fitness tools</title>
+<meta name="description" content="Real-guitar stream alerts and an adaptive fitness tracker. Made by a guitarist who codes.">
+<style>
+  :root{
+    --bg:#121214; --panel:#1c1c20; --panel2:#232329;
+    --text:#f4f4f5; --muted:#9a9aa3; --amber:#f59e0b; --blue:#2563eb; --line:#2c2c33;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:480px;margin:0 auto;padding:32px 20px 56px}
+  header{text-align:center;margin-bottom:28px}
+  .logo{font-size:30px;font-weight:800;letter-spacing:.5px}
+  .logo span{color:var(--amber)}
+  .tag{color:var(--muted);font-size:15px;margin-top:6px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;
+    overflow:hidden;margin-bottom:22px}
+  .card img{width:100%;display:block;aspect-ratio:1/1;object-fit:cover}
+  .card .body{padding:18px 18px 20px}
+  .card h2{margin:0 0 6px;font-size:20px}
+  .card p{margin:0 0 16px;color:var(--muted);font-size:14.5px}
+  .btn{display:flex;align-items:center;justify-content:center;gap:8px;
+    text-decoration:none;color:var(--text);background:var(--panel2);
+    border:1px solid var(--line);border-radius:12px;padding:13px 16px;
+    font-weight:600;font-size:15px;margin-top:10px;transition:transform .05s ease,border-color .15s}
+  .btn:hover{border-color:var(--amber)}
+  .btn:active{transform:scale(.99)}
+  .btn.primary{background:var(--amber);color:#1a1305;border-color:var(--amber)}
+  .btn.blue{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .tagrow{font-size:12px;color:var(--muted);margin-top:14px;text-align:center}
+  footer{text-align:center;color:var(--muted);font-size:12.5px;margin-top:36px}
+  footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">Riff<span>Stream</span></div>
+    <div class="tag">Real-guitar stream SFX &amp; smart fitness tools — made by a guitarist who codes.</div>
+  </header>
+
+  <div id="cards"></div>
+
+  <footer>
+    <div>RiffStream · made with real strings and real spreadsheets</div>
+  </footer>
+</div>
+
+<script>
+// === EDITA SOLO ESTO ===
+// Pega/actualiza las URLs. Si dejas una vacia (''), su boton no aparece.
+// (la del fitness en Etsy: copiala del listing cuando la tengas y pegala abajo)
+const PRODUCTS = [
+  {
+    img: "assets/sfx.png",
+    title: "Real Guitar Stream Alerts (Vol. 1)",
+    blurb: "6 alert riffs on a real electric guitar — clean for follows, crunch for donations, fuzz for raids. Streamlabs &amp; OBS. Zero presets.",
+    links: [
+      { label: "Get it on itch.io (pay what you want)", url: "https://riffstream.itch.io/real-guitar-stream-alerts-boutique-tone-sfx-vol-1", style: "primary" },
+      { label: "Gumroad", url: "https://jeiriz.gumroad.com/l/gajolo", style: "" },
+      { label: "Etsy", url: "https://www.etsy.com/listing/4520371511", style: "" }
+    ]
+  },
+  {
+    img: "assets/fitness.png",
+    title: "Adaptive Fitness Tracker",
+    blurb: "The spreadsheet that coaches you back: TDEE + macros, a 7-day weight-trend engine and an RIR workout log. Excel + Google Sheets.",
+    links: [
+      { label: "Get it on Gumroad", url: "https://jeiriz.gumroad.com/l/cajakq", style: "blue" },
+      { label: "Etsy", url: "", style: "" }   // <- pega aca la URL del listing de Etsy del fitness
+    ]
+  }
+];
+// === FIN DE LO EDITABLE ===
+
+const root = document.getElementById('cards');
+PRODUCTS.forEach(p => {
+  const buttons = p.links
+    .filter(l => l.url && l.url.trim())
+    .map(l => `<a class="btn ${l.style}" href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`)
+    .join('');
+  root.insertAdjacentHTML('beforeend', `
+    <div class="card">
+      <img src="${p.img}" alt="${p.title}">
+      <div class="body">
+        <h2>${p.title}</h2>
+        <p>${p.blurb}</p>
+        ${buttons}
+      </div>
+    </div>`);
+});
+</script>
+</body>
+</html>
