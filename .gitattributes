@@ -1,0 +1,4 @@
+# Scripts de shell SIEMPRE con LF, aunque se editen/commiteen en Windows.
+# Sin esto, bash en Linux/VM falla con "set: pipefail: invalid option name".
+*.sh   text eol=lf
+install.sh text eol=lf
