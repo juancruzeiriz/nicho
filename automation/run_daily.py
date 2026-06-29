@@ -23,7 +23,7 @@ def run(dry_run=False, config_path=None):
     picks = cq.pick_for_today(catalog, usage,
                               sched.get('pins_per_day', 1),
                               sched.get('videos_per_day', 1))
-    lines, drafts = [], []
+    lines, drafts, links = [], [], []
     for item in picks:
         posted_live = []
         for pname in item.platforms:
@@ -40,6 +40,8 @@ def run(dry_run=False, config_path=None):
             lines.append(f'{item.id}: {res.line()}')
             if res.ok and not dry_run and mode == 'live':
                 posted_live.append(pname)
+                if res.ref.startswith('http'):
+                    links.append(f'{pname}: {res.ref}')
             if pname == 'reddit' and res.ref.startswith('TITULO'):
                 drafts.append(res.ref)
         if posted_live and not dry_run:
@@ -68,6 +70,8 @@ def run(dry_run=False, config_path=None):
     low = [f'{k} (~{v["days_left"]}d)' for k, v in h.items() if v['days_left'] < low_thr]
 
     body = '\n'.join(lines) or '(nada para postear)'
+    if links:
+        body = '▶ Publicado:\n' + '\n'.join(links) + '\n\n' + body
     if drafts:
         body += '\n\n--- Reddit: pegar a mano ---\n' + '\n\n'.join(drafts)
     if low:
