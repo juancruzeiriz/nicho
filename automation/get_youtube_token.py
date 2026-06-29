@@ -18,7 +18,14 @@ SCOPES = ['https://www.googleapis.com/auth/youtube.upload']
 def main():
     cs = sys.argv[1] if len(sys.argv) > 1 else 'client_secret.json'
     flow = InstalledAppFlow.from_client_secrets_file(cs, SCOPES)
-    creds = flow.run_local_server(port=0)
+    # access_type=offline -> devuelve refresh_token (sin esto puede venir vacio).
+    # prompt='select_account consent' -> deja ELEGIR la cuenta (no usa la del
+    # navegador por defecto) y fuerza la pantalla de permisos.
+    creds = flow.run_local_server(
+        port=0, access_type='offline', prompt='select_account consent')
+    if not creds.refresh_token:
+        sys.exit('No vino refresh_token. Reintenta (revoca el acceso previo en '
+                 'https://myaccount.google.com/permissions y volve a correr).')
     with open(cs, encoding='utf-8') as f:
         c = json.load(f)
     c = c.get('installed') or c.get('web')
