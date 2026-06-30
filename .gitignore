@@ -254,3 +254,8 @@ automation/.venv/
 
 # Tarball de deploy del bot (artefacto local, no versionar)
 nicho-bot-deploy.tar.gz
+
+# Credenciales OAuth de Google descargadas (NUNCA versionar)
+client_secret*.json
+# Export de board IDs de Tailwind (no hace falta versionar)
+pinterest_boards_all_accounts.csv
