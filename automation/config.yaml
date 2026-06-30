@@ -26,9 +26,10 @@ content:
 media_base_url: ""        # https://juancruzeiriz.github.io/nicho
 
 notify:
-  channel: telegram       # telegram | email | none
-  # secrets: automation/secrets/telegram.json  -> {"token": "...", "chat_id": "..."}
-  # o      automation/secrets/email.json        -> {"smtp_host","smtp_port","user","password","to"}
+  channel: discord        # discord | telegram | email | none
+  # discord : automation/secrets/discord.json  -> {"webhook_url": "https://discord.com/api/webhooks/..."}
+  # telegram: automation/secrets/telegram.json  -> {"token": "...", "chat_id": "..."}
+  # email   : automation/secrets/email.json     -> {"smtp_host","smtp_port","user","password","to"}
 
 # Rotacion opcional de URLs de destino por producto (si vacio, usa el link del asset).
 destinations:
