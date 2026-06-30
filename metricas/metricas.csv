@@ -13,3 +13,8 @@ fecha,producto,plataforma,vistas,favoritos,conversiones,ingreso_usd,precio,fuent
 2026-06-27,Overlay Moto,Etsy,1,0,0,0,12,Etsy interno,"mes 1-28jun; listing en espanol"
 2026-06-27,Overlay Gym,Etsy,1,0,0,0,12,Etsy interno,"mes 1-28jun; listing en espanol"
 2026-06-27,SHOP Etsy,Etsy,8,0,0,0,,"88% Etsy interno / 12% directo","trafico social=0, pinterest=0, ads=0; 0 favoritos/followers/reviews"
+2026-06-29,Pack SFX,YouTube,0,0,0,0,5,YouTube Shorts,bot VM subio 1er Short https://youtu.be/k3ZAZhB5SBM; 1/dia automatico via cron; 6 videos en catalogo
+2026-06-29,Fitness Tracker,Pinterest,0,0,0,0,12,Pinterest,5 pines EN programados 1/dia via Tailwind (trial 10 usadas); board Fitness & Macro Trackers; baseline impresiones=0; revisar ~9jul
+2026-06-29,Pack SFX,Pinterest,0,0,0,0,5,Pinterest,5 pines EN programados 1/dia via Tailwind; board Rock & Guitar Streaming; baseline impresiones=0; revisar ~9jul
+2026-06-29,Overlays (ES viejos),Pinterest,36,0,0,0,12,Pinterest interno,"6 pines viejos en espanol (overlays): vistas 5/3/1/10/9/8; direccion vieja, no se invierte mas"
+2026-06-29,Fitness Tracker,Pinterest,0,0,0,0,12,Pinterest,pin EN 'Your scale is lying to you' publicado a mano: 0 vistas dia 1 (normal en Pinterest nuevo)
