@@ -1,61 +1,41 @@
 # Real Guitar Stream Alerts — doc interno del pack (producto #2)
 
-> Estado: **Vol. 1 LISTO para publicar** con los 6 riffs reales ya grabados.
-> Reframeado de "pack de 18" a "Vol. 1 de 6" (honesto + competitivo: la
-> validación mostró packs de 5 sonidos a $3-6 con cientos de reviews).
-> Los 12 sonidos cortos pasan a **Vol. 2** (roadmap abajo). GO en `VALIDACION.md`.
+> Estado: **Vol. 1 Expanded, PUBLICADO** — 66 sonidos reales en 10 tonos
+> (clean, overdrive, fuzz, crunch, blues, rock, funk, delay, reverb,
+> ambient/chords). Publicado en itch/Gumroad/Etsy el 17-ago-2026 via
+> `RiffStream_Vol1_Expanded.zip`. Copy en `LISTINGS_Vol1_Expanded.md`.
+> El roadmap "Vol. 2" de abajo quedó absorbido por esta expansión.
 
-## Inventario de Vol. 1 (en `audios/`, 6 riffs · 68s totales)
+## Inventario
 
-| Origen | Nombre en pack | Dur. | Evento sugerido |
-|---|---|---|---|
-| alert-clean-1.mp3 | RGSP_Clean_Alert_01.mp3 | ~10s | New follower |
-| alert-clean-2.mp3 | RGSP_Clean_Alert_02.mp3 | ~6s | New sub |
-| alert-overdrive-1.mp3 | RGSP_Overdrive_Alert_01.mp3 | ~11s | Donation / cheer |
-| alert-overdrive-2.mp3 | RGSP_Overdrive_Alert_02.mp3 | ~18s | Big donation |
-| alert-fuzz-1.mp3 | RGSP_Fuzz_Alert_01.mp3 | ~13s | Raid |
-| alert-fuzz-2.mp3 | RGSP_Fuzz_Alert_02.mp3 | ~11s | Hype train |
+- **Selección curada para el comprador** (66 sonidos, todos los tonos):
+  `audios/pack/`. Empaquetada en `RiffStream_Vol1_Expanded.zip` (no vía
+  `build_sfx_pack.py` — ese script sigue armando el ZIP viejo de 6 sonidos,
+  ver nota abajo).
+- **Audio para el bot de marketing** (2 tomas por tono nuevo, para
+  `products/Guitar_SFX_Pack/build_video_clips.py`): `audios/*.mp3` en la
+  raíz (`alert-<tono>-01.mp3` / `-02.mp3`). Genera los Shorts 9:16 que
+  postea el cron en la VM.
 
-**Build:** `python build_sfx_pack.py` (standard) y `--tier commercial`. Cross-platform,
-no necesita PowerShell. Genera `RealGuitar_StreamAlerts_{standard,commercial}.zip`.
-
-## Vol. 2 — roadmap (grabar cuando puedas)
-
-Por la validación, la categoría organiza por **evento**, no por tono. Checklist:
-
-- [ ] 2 stingers **clean** cortos (<2s) — follower
-- [ ] 2 stingers **overdrive** cortos (<2s) — follower/sub
-- [ ] 2 stingers **fuzz** cortos (<2s) — bits/cheer
-- [ ] 1 riff **clean** 2-3s — donation
-- [ ] 1 riff **overdrive** 2-3s — donation grande
-- [ ] 1 riff **fuzz** 2-3s — host
-- [ ] 2 transiciones 3-5s (subida limpia→fuzz) — BRB / Starting soon
-- [ ] 2 raid stingers **fuzz** intensos 3-4s — raid
-
-**Specs de export (Reaper):** master WAV 48 kHz / 24-bit, normalizado a
-**−14 LUFS** integrado, true peak **−1 dBTP**, sin silencio inicial (>50 ms),
-dejar la cola natural del ampli. Export adicional MP3 320 kbps CBR.
-Nombrar: `RGSP_{Tono}_{Evento}_{NN}` (ej. `RGSP_Clean_Follower_01.wav`).
-
-## Empaquetar
+## Empaquetar (pendiente de actualizar)
 
 ```powershell
 cd products\Guitar_SFX_Pack
-.\build_sfx_pack.ps1                       # tier standard, solo MP3
-.\build_sfx_pack.ps1 -Tier commercial      # zip con licencia comercial
-.\build_sfx_pack.ps1 -WavDir ..\..\audios_wav   # cuando existan los WAV
+.\build_sfx_pack.ps1                       # OJO: todavía arma el ZIP viejo de 6 sonidos
 ```
 
-El script valida que estén los 6 audios (guardas tipo T3: si falta uno, corta
-con error en vez de armar un ZIP incompleto).
+`build_sfx_pack.py` / `build_sfx_pack.ps1` no se actualizaron para los 66
+sonidos — `RiffStream_Vol1_Expanded.zip` se armó aparte. Si hay que
+re-generar el ZIP del comprador, actualizar `RENAMES` en
+`build_sfx_pack.py` primero (hoy solo mapea los 6 originales).
 
-## Canales y precios (de VALIDACION.md)
+## Canales y precios (post-expansión, 17-ago-2026)
 
 | Canal | Formato | Precio |
 |---|---|---|
-| itch.io | PWYW | piso **$5** |
-| Gumroad | fijo | **$10** standard / **$18** commercial |
-| Etsy (bonus: la tienda ya existe) | fijo | **$8** standard |
+| itch.io | PWYW | sugerido **$5** |
+| Gumroad | fijo | **$9** |
+| Etsy (listing 4520371511) | fijo | **$9** |
 
-Copy listo en `LISTING_EN.md`. **Ojo:** el copy dice "18 sounds" — si el pack
-final tiene otro número, actualizar listing + README del comprador.
+Copy vivo en `LISTINGS_Vol1_Expanded.md` (reemplaza a `LISTING_EN.md`, que
+quedó desactualizado con el copy de 6 sonidos / 3 tonos).
