@@ -233,13 +233,13 @@ PINS = [
         hooks=[
             ("Your stream alerts sound like a toy keyboard.",
              "Mine sound like a real guitar - through a boutique overdrive and a "
-             "germanium fuzz. 6 riffs for follows, donations and raids."),
+             "germanium fuzz. 66 sounds for follows, donations and raids."),
             ("Real guitar stream alerts (not synth presets)",
              "Clean for follows, crunch for donos, fuzz for raids. Works with "
              "Streamlabs, StreamElements and OBS."),
-            ("3 tones for 3 stream moments",
-             "Clean . Overdrive . Fuzz - played on a real rig. Zero presets, zero "
-             "stock-audio farm. Made by a guitarist who streams."),
+            ("10 tones for every stream moment",
+             "Clean, overdrive, fuzz, blues, rock, funk and more - played on a real "
+             "rig. Zero presets, zero stock-audio farm."),
             ("Make your raid feel epic.",
              "A real-guitar fuzz riff for the moment your stream gets raided. "
              "Hand-played, not a sample. Pay what you want on itch."),
@@ -247,14 +247,20 @@ PINS = [
              "Boutique Artemis overdrive + germanium fuzz. If your stream has any "
              "rock, metal or punk in it, these alerts fit."),
             ("Stop using the same alert as everyone else.",
-             "6 stream alert riffs on a real electric guitar. Follows, donations, "
-             "raids. MP3, normalized, Streamlabs & OBS ready."),
+             "66 stream alert sounds on a real electric guitar. Follows, donations, "
+             "raids, transitions. MP3, normalized, Streamlabs & OBS ready."),
             ("From a guitarist who streams.",
              "Every take played, picked and mixed by hand - not a stock-audio farm. "
              "Real strings, real pedals, zero presets."),
             ("Your raid alert, but it's an actual guitar.",
-             "Full-chaos fuzz for raids and hype trains. Clean and overdrive too. "
-             "Vol. 1, pay what you want."),
+             "Full-chaos fuzz for raids and hype trains. 66 sounds across 10 tones, "
+             "pay what you want."),
+            ("66 sounds. 10 tones. Zero synth presets.",
+             "Clean, overdrive, fuzz, crunch, blues, rock, funk, delay, reverb and "
+             "ambient chords - every one a real guitar take."),
+            ("Blues, funk, delay, reverb... all real guitar.",
+             "The expanded pack covers every stream moment, not just follows and "
+             "raids. Scene changes, polls, chat highlights, intros."),
         ],
     ),
 ]

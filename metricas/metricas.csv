@@ -13,3 +13,14 @@ fecha,producto,plataforma,vistas,favoritos,conversiones,ingreso_usd,precio,fuent
 2026-06-27,Overlay Moto,Etsy,1,0,0,0,12,Etsy interno,"mes 1-28jun; listing en espanol"
 2026-06-27,Overlay Gym,Etsy,1,0,0,0,12,Etsy interno,"mes 1-28jun; listing en espanol"
 2026-06-27,SHOP Etsy,Etsy,8,0,0,0,,"88% Etsy interno / 12% directo","trafico social=0, pinterest=0, ads=0; 0 favoritos/followers/reviews"
+2026-06-29,Pack SFX,YouTube,0,0,0,0,5,YouTube Shorts,bot VM subio 1er Short https://youtu.be/k3ZAZhB5SBM; 1/dia automatico via cron; 6 videos en catalogo
+2026-06-29,Fitness Tracker,Pinterest,0,0,0,0,12,Pinterest,5 pines EN programados 1/dia via Tailwind (trial 10 usadas); board Fitness & Macro Trackers; baseline impresiones=0; revisar ~9jul
+2026-06-29,Pack SFX,Pinterest,0,0,0,0,5,Pinterest,5 pines EN programados 1/dia via Tailwind; board Rock & Guitar Streaming; baseline impresiones=0; revisar ~9jul
+2026-06-29,Overlays (ES viejos),Pinterest,36,0,0,0,12,Pinterest interno,"6 pines viejos en espanol (overlays): vistas 5/3/1/10/9/8; direccion vieja, no se invierte mas"
+2026-06-29,Fitness Tracker,Pinterest,0,0,0,0,12,Pinterest,pin EN 'Your scale is lying to you' publicado a mano: 0 vistas dia 1 (normal en Pinterest nuevo)
+2026-08-17,SHOP Etsy,Etsy,31,0,0,0,,Etsy interno,"lifetime may-ago: 31 visitas 0 pedidos 0 favoritos/seguidores/resenas; este mes (1-17ago) 16 visitas. 0 mails de venta/contacto en jeiriznicho@gmail.com"
+2026-08-17,Fitness Tracker,Gumroad,,,0,0,12,,"0 sales historico (revisado dashboard app.gumroad.com)"
+2026-08-17,Pack SFX,Gumroad,,,0,0,5,,"0 sales historico; listing sigue en 6 sonidos, falta subir el pack expandido a 66"
+2026-08-17,Pack SFX,itch.io,46,,,0,5,itch interno,"lifetime: 46 vistas 12 descargas 0 followers (vs 20/5 el 27jun); listing sigue en 6 sonidos"
+2026-08-17,Pack SFX,YouTube,,,,,,YouTube Shorts,"bot cron en la VM activo sin cortes: 51 corridas diarias 29jun-17ago; 1er short 1.3K vistas; contenido en loop (misma tanda de 6 clips desde jun, aviso 'contenido fresco bajo' en cada corrida); token YouTube se revoco una vez a principios de jul y se reautorizo (reauth_youtube.py)"
+2026-08-17,RiffStream,Pinterest,20,,0,0,,Pinterest,"ultimos 30 dias, cuenta completa: 20 impresiones 0 engagements 0 clics 0 guardados, audiencia 17. El posteo propio del bot esta enabled:false en la VM (config local dice true pero nunca se deployo) -- los pines que salieron fueron via Tailwind aparte"
