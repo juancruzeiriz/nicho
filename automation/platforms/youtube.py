@@ -15,11 +15,27 @@ def _service():
     return build('youtube', 'v3', credentials=creds, cache_discovery=False)
 
 
+def _has_audio(path, min_db=-70.0):
+    """Rechaza subir si la pista de audio esta muda (silencio digital)."""
+    import re
+    import subprocess
+    r = subprocess.run(
+        ['ffmpeg', '-i', path, '-af', 'volumedetect', '-f', 'null', '-'],
+        capture_output=True, text=True)
+    m = re.search(r'max_volume:\s*(-?\d+(\.\d+)?)\s*dB', r.stderr)
+    if not m:
+        return False
+    return float(m.group(1)) > min_db
+
+
 def post(item, mode, cfg, dry_run=False):
     if item.kind != 'video':
         return Result(True, 'youtube', mode, msg='skip (no es video)')
     if dry_run or mode != 'live':
         return Result(True, 'youtube', mode, msg='dry/skip')
+    if not _has_audio(abspath(item.asset)):
+        return Result(False, 'youtube', mode,
+                      msg=f'BLOQUEADO: {item.asset} sin audio audible (silencio detectado)')
     from googleapiclient.http import MediaFileUpload
     yt = _service()
     title = (item.title[:90] + ' #Shorts')[:100]

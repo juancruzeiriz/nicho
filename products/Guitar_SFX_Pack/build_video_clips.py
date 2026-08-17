@@ -48,6 +48,34 @@ CLIPS = [
      'Real strings. Real pedals. Zero presets.'),
     ('alert-clean-2.mp3', 'CLEAN', 'new-sub alert', (250, 204, 21),
      'Tired of alerts that sound like a toy keyboard?'),
+    ('alert-crunch-01.mp3', 'CRUNCH', 'new-follower alert', (234, 88, 12),
+     'Your follower alert, played on a real AC/DC-style rig.'),
+    ('alert-blues-01.mp3', 'BLUES', 'donation alert', (37, 99, 235),
+     'This is what a donation should sound like. Real blues guitar.'),
+    ('alert-rock-01.mp3', 'ROCK', 'raid alert', (220, 38, 38),
+     'Raid incoming: real electric guitar, zero presets.'),
+    ('alert-funk-01.mp3', 'FUNK', 'hype-train alert', (168, 85, 247),
+     'Hype train pulling in. Real funk guitar, no synth.'),
+    ('alert-delay-01.mp3', 'DELAY', 'new-sub alert', (34, 211, 238),
+     'New sub! Dotted-delay guitar, straight off real gear.'),
+    ('alert-reverb-01.mp3', 'REVERB', 'new-follower alert', (20, 184, 166),
+     'A real-guitar welcome for every new follower.'),
+    ('alert-chords-01.mp3', 'CHORDS', 'welcome sting', (139, 92, 246),
+     'A mysterious real-guitar sting for your stream.'),
+    ('alert-crunch-02.mp3', 'CRUNCH', 'donation alert', (234, 88, 12),
+     'Real crunch guitar for every donation. No presets.'),
+    ('alert-blues-02.mp3', 'BLUES', 'new-sub alert', (37, 99, 235),
+     'New sub! A warm blues lick on real strings.'),
+    ('alert-rock-02.mp3', 'ROCK', 'hype-train alert', (220, 38, 38),
+     'Hype train! A punchy real-guitar rock hit.'),
+    ('alert-funk-02.mp3', 'FUNK', 'new-follower alert', (168, 85, 247),
+     'New follower, welcomed with tight real funk guitar.'),
+    ('alert-delay-02.mp3', 'DELAY', 'raid alert', (34, 211, 238),
+     'Raid incoming, wrapped in spacious delay guitar.'),
+    ('alert-reverb-02.mp3', 'REVERB', 'welcome sting', (20, 184, 166),
+     'A big ambient real-guitar swell to open your stream.'),
+    ('alert-chords-02.mp3', 'CHORDS', 'scene change', (139, 92, 246),
+     'A mysterious chord sting for scene changes.'),
 ]
 
 
@@ -121,7 +149,7 @@ def ffmpeg_cmd(bg, audio, out, accent):
     return [
         'ffmpeg', '-y', '-loop', '1', '-i', bg, '-i', audio,
         '-filter_complex', flt, '-map', '[v]', '-map', '1:a',
-        '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-r', '30',
+        '-c:v', 'libx264', '-preset', 'ultrafast', '-threads', '1', '-pix_fmt', 'yuv420p', '-r', '30',
         '-c:a', 'aac', '-b:a', '192k', '-shortest', out,
     ]
 
