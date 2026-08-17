@@ -259,3 +259,10 @@ nicho-bot-deploy.tar.gz
 client_secret*.json
 # Export de board IDs de Tailwind (no hace falta versionar)
 pinterest_boards_all_accounts.csv
+
+# Audio: masters/normalizados sin curar del pack expandido (regenerables desde
+# las tomas originales; audios/pack/ tiene la seleccion final de 66 sonidos)
+audios/_master/
+audios/_normalized/
+audios/_youtube_stage/
+audios/*_[0-9][0-9].mp3

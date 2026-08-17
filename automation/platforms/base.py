@@ -38,6 +38,6 @@ def load_secret(name):
 
 # Mapeo producto -> tablero de Pinterest (mismo nombre que en build_product_pins)
 BOARDS = {
-    'fitness': 'Fitness & Nutrition',
-    'sfx': 'Stream Setup / Twitch',
+    'fitness': 'Fitness & Macro Trackers',
+    'sfx': 'Rock & Guitar Streaming',
 }
