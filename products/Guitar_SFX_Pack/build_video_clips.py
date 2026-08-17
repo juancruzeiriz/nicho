@@ -48,6 +48,20 @@ CLIPS = [
      'Real strings. Real pedals. Zero presets.'),
     ('alert-clean-2.mp3', 'CLEAN', 'new-sub alert', (250, 204, 21),
      'Tired of alerts that sound like a toy keyboard?'),
+    ('youtube/alert-blues-01.mp3', 'BLUES', 'chat highlight', (59, 130, 246),
+     'Not every alert needs to scream. This one has soul.'),
+    ('youtube/alert-rock-01.mp3', 'ROCK', 'clip-worthy hit', (249, 115, 22),
+     'Punchy, no fluff. A real guitar hit, not a loop.'),
+    ('youtube/alert-funk-01.mp3', 'FUNK', 'poll alert', (168, 85, 247),
+     'Tight and rhythmic. Still a real guitar, not a loop pack.'),
+    ('youtube/alert-crunch-01.mp3', 'CRUNCH', 'bits alert', (190, 18, 60),
+     'Some alerts need an edge. This one has teeth.'),
+    ('youtube/alert-delay-01.mp3', 'DELAY', 'scene transition', (20, 184, 166),
+     'The sound of your scene changing. Real guitar, real delay.'),
+    ('youtube/alert-reverb-01.mp3', 'REVERB', 'intro / outro', (14, 165, 233),
+     'Big and ambient. This is how your stream should start.'),
+    ('youtube/alert-chords-01.mp3', 'CHORDS', 'mystery intro', (100, 116, 139),
+     'The sound before something happens.'),
 ]
 
 
@@ -142,7 +156,7 @@ def main():
         if not os.path.exists(audio):
             print('  FALTA audio:', audio)
             continue
-        stem = os.path.splitext(audio_name)[0]
+        stem = os.path.splitext(os.path.basename(audio_name))[0]
         bg = os.path.join(BG_DIR, stem + '.png')
         out = os.path.join(OUT, stem + '.mp4')
         build_bg(tone, event, accent, caption, bg)
