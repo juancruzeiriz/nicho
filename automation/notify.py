@@ -2,8 +2,18 @@
 from .platforms.base import load_secret
 
 
+# Canales bloqueados a nivel codigo (no alcanza con config.yaml). Discord
+# bloqueado a pedido de Jc (13/11/2026): no se manda nada a Discord ni aunque
+# alguien vuelva a poner channel: discord.
+BLOCKED_CHANNELS = {'discord'}
+
+
 def send(cfg, subject, body):
     ch = (cfg.get('notify') or {}).get('channel', 'none')
+    if ch in BLOCKED_CHANNELS:
+        print(f'[notify] canal "{ch}" bloqueado: no se envia nada. '
+              f'{subject}')
+        return
     try:
         if ch == 'telegram':
             import requests

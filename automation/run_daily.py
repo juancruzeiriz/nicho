@@ -15,6 +15,15 @@ from .platforms.base import Result
 
 def run(dry_run=False, config_path=None):
     cfg = load_config(config_path)
+
+    # Kill switch global (config.yaml -> enabled). Apagado a pedido de Jc
+    # (13/11/2026): no se arma ni se manda nada de RiffStream. Para volver a
+    # prenderlo hay que poner enabled: true a mano en automation/config.yaml.
+    if not cfg.get('enabled', False):
+        print('[run_daily] bot DESACTIVADO (config.yaml -> enabled: false). '
+              'No se arma ni se postea ni se notifica nada.')
+        return
+
     sched = cfg.get('schedule', {})
     platforms_cfg = cfg.get('platforms', {})
     catalog = cq.build_catalog()

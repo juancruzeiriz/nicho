@@ -1,9 +1,14 @@
 # Configuracion del bot de marketing. Editable sin tocar codigo.
 # Los TOKENS no van aca: van en automation/secrets/ (ignorado por git).
 
+# KILL SWITCH GLOBAL. Con enabled: false el bot NO arma ni manda nada:
+# run_daily aborta antes de tocar la cola, las plataformas y el notificador.
+# Desactivado a pedido de Jc (13/11/2026): se baja todo lo de RiffStream.
+enabled: false
+
 schedule:
-  pins_per_day: 1        # cuantos pines de Pinterest por dia
-  videos_per_day: 1      # cuantos videos (YT/TikTok/IG) por dia
+  pins_per_day: 0        # cuantos pines de Pinterest por dia
+  videos_per_day: 0      # cuantos videos (YT/TikTok/IG) por dia
   # hora la define el cron del sistema (ver DEPLOY.md)
 
 # Estado por plataforma. mode:
@@ -12,11 +17,11 @@ schedule:
 #   notify -> NO postea; arma el contenido y avisa para pegado manual
 #   off    -> desactivada
 platforms:
-  pinterest: { enabled: true,  mode: live }
-  youtube:   { enabled: true,  mode: live }
-  tiktok:    { enabled: true,  mode: draft }   # -> live cuando pase el audit
-  instagram: { enabled: false, mode: live }    # -> enabled:true cuando pase el app review
-  reddit:    { enabled: true,  mode: notify }  # se queda en notify por riesgo de ban
+  pinterest: { enabled: false, mode: off }
+  youtube:   { enabled: false, mode: off }
+  tiktok:    { enabled: false, mode: off }
+  instagram: { enabled: false, mode: off }
+  reddit:    { enabled: false, mode: off }
 
 content:
   low_threshold_days: 7   # si queda menos contenido fresco que esto, avisa "alimentar"
@@ -26,7 +31,8 @@ content:
 media_base_url: ""        # https://juancruzeiriz.github.io/nicho
 
 notify:
-  channel: discord        # discord | telegram | email | none
+  channel: none           # discord | telegram | email | none
+  # Discord apagado a pedido de Jc (13/11/2026): no se manda nada a Discord.
   # discord : automation/secrets/discord.json  -> {"webhook_url": "https://discord.com/api/webhooks/..."}
   # telegram: automation/secrets/telegram.json  -> {"token": "...", "chat_id": "..."}
   # email   : automation/secrets/email.json     -> {"smtp_host","smtp_port","user","password","to"}
